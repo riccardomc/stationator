@@ -1,5 +1,6 @@
 # flyctl launch added from .gitignore
 **/__pycache__
+**/.env
 **/*.egg-info
 **/.*.swp
 **/dist
