@@ -90,4 +90,4 @@ def trains(where: str):
     ui.link("Back", "/trains")
 
 
-ui.run(host="0.0.0.0", favicon="☠️", title="Stationator")
+ui.run(host="0.0.0.0", favicon="☠️", title="Stationator", show=False)
