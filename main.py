@@ -34,6 +34,16 @@ async def trains(where: str):
     # get trips
     trips = await ns.get_trips(where)
 
+    # serialize trips, format datetimes
+    rows = [
+        {
+            k: v.strftime("%H:%M") if isinstance(v, datetime) else str(v)
+            for k, v in vars(t).items()
+        }
+        for t in trips
+    ]
+
+    # build table
     table = ui.table(
         columns=columns,
         rows=rows,
@@ -44,6 +54,8 @@ async def trains(where: str):
         },
         row_key="name",
     )
+
+    # add table header
     table.add_slot(
         "header",
         r"""
@@ -54,6 +66,16 @@ async def trains(where: str):
     </q-tr>
     """,
     )
+
+    # update label
+    now = datetime.now().strftime("%H:%M:%S %d-%m-%Y")
+    label.bind_text_from(
+        table,
+        "rows",
+        lambda rows: f"Found {len(rows)} trips at {now}",
+    )
+
+    # add back link
     ui.link("Back", "/trains")
 
 
