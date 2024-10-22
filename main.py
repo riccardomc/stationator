@@ -4,47 +4,17 @@ from nicegui import ui
 import ns
 
 
-def strf(d):
-    return d.strftime("%H:%F")
-
-
-columns = [
-    {
-        "name": "departure_time",
-        "label": "departure_time",
-        "field": "departure_time",
-    },
-    {
-        "name": "arrival_time",
-        "label": "arrival_time",
-        "field": "arrival_time",
-    },
-    {
-        "name": "origin",
-        "label": "origin",
-        "field": "origin",
-    },
-    {
-        "name": "destination",
-        "label": "destination",
-        "field": "destination",
-    },
-    {
-        "name": "status",
-        "label": "status",
-        "field": "status",
-    },
-    {
-        "name": "leave_by",
-        "label": "leave_by",
-        "field": "leave_by",
-    },
-    {
-        "name": "arrive_by",
-        "label": "arrive_by",
-        "field": "arrive_by",
-    },
+columns_order = [
+    "departure_time",
+    "arrival_time",
+    "origin",
+    "destination",
+    "status",
+    "leave_by",
+    "arrive_by",
 ]
+
+columns = [{"name": c, "label": c, "field": c} for c in columns_order]
 
 
 @ui.page("/")
