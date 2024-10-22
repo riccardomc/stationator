@@ -122,7 +122,7 @@ def fetch_trips(origin="laa", destination="asdz"):
     return data
 
 
-def get_trips(where_to="home"):
+async def get_trips(where_to="home"):
     if where_to == "work":
         trips_data = (
             fetch_trips(origin="laa", destination="asdz")["trips"]

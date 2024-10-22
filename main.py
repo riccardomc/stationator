@@ -29,13 +29,10 @@ def trains_index():
 
 
 @ui.page("/trains/{where}")
-def trains(where: str):
-    trips = ns.get_trips(where)
-    rows = [vars(t) for t in trips]
-    for r in rows:
-        for k, v in r.items():
-            if isinstance(v, datetime):
-                r[k] = v.strftime("%H:%M")
+async def trains(where: str):
+    label = ui.label(f"fetching trips to {where}...")
+    # get trips
+    trips = await ns.get_trips(where)
 
     table = ui.table(
         columns=columns,
