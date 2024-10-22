@@ -28,8 +28,8 @@ After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker start -a ghcr.io/riccardomc/stationator:main
-ExecStop=/usr/bin/docker stop -t 2 ghcr.io/riccardomc/stationator:main
+ExecStart=/usr/bin/docker start -a stationator
+ExecStop=/usr/bin/docker stop -t 2 stationator
 
 [Install]
 WantedBy=default.target
