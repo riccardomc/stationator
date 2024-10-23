@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from datetime import datetime
-from nicegui import ui
+from datetime import datetime, timezone
+from nicegui import ui, run
 import ns
 
 
@@ -30,9 +30,16 @@ def trains_index():
 
 @ui.page("/trains/{where}")
 async def trains(where: str):
-    label = ui.label(f"fetching trips to {where}...")
-    # get trips
-    trips = await ns.get_trips(where)
+
+    # already display page once client websocket is connected
+    await ui.context.client.connected()
+    with ui.row():
+        label = ui.label(f"Fetching trips to {where}...")
+        spinner = ui.spinner()
+
+    # get trips async
+    trips = await run.io_bound(ns.get_trips, where)
+    spinner.visible = False
 
     # serialize trips, format datetimes
     rows = [
@@ -43,7 +50,7 @@ async def trains(where: str):
         for t in trips
     ]
 
-    # build table
+    # build and display table
     table = ui.table(
         columns=columns,
         rows=rows,
@@ -68,7 +75,8 @@ async def trains(where: str):
     )
 
     # update label
-    now = datetime.now().strftime("%H:%M:%S %d-%m-%Y")
+    now_utc = datetime.now(timezone.utc)
+    now = now_utc.astimezone().strftime("%H:%M")
     label.bind_text_from(
         table,
         "rows",
