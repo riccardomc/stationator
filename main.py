@@ -24,12 +24,12 @@ def root():
 
 @ui.page("/trains")
 def trains_index():
-    ui.link("Trains to Work (Den Haag - Amsterdam)", "/trains/work")
-    ui.link("Trains to Home (Amsterdam - Den Haag)", "/trains/home")
+    ui.link("Trains to Work (Den Haag - Amsterdam)", "/trains/work/0")
+    ui.link("Trains to Home (Amsterdam - Den Haag)", "/trains/home/0")
 
 
-@ui.page("/trains/{where}")
-async def trains(where: str):
+@ui.page("/trains/{where}/{delta}")
+async def trains_where_delta(where: str, delta: int):
 
     # already display page once client websocket is connected
     await ui.context.client.connected()
@@ -37,8 +37,14 @@ async def trains(where: str):
         label = ui.label(f"Fetching trips to {where}...")
         spinner = ui.spinner()
 
+    # set time
+    if delta is None or delta == "" or type(delta) is not int:
+        delta = 0
+    date_time = ns.get_amsterdam_time(delta)
+    print(f"going to fetch {date_time}")
+
     # get trips async
-    trips = await run.io_bound(ns.get_trips, where)
+    trips = await run.io_bound(ns.get_trips, where, date_time)
     spinner.visible = False
 
     # serialize trips, format datetimes
@@ -84,7 +90,10 @@ async def trains(where: str):
     )
 
     # add back link
-    ui.link("Back", "/trains")
+    with ui.row():
+        ui.link("Index", "/trains")
+        ui.link("Less", f"/trains/{where}/{delta - 1}")
+        ui.link("Plus", f"/trains/{where}/{delta + 1}")
 
 
 ui.run(host="0.0.0.0", favicon="☠️", title="Stationator", show=False)

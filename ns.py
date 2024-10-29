@@ -3,7 +3,9 @@
 import os
 import json
 import dateutil.parser
+import dateutil.tz
 import urllib.request
+import urllib.parse
 from datetime import datetime, timedelta
 
 stations = {
@@ -49,8 +51,7 @@ class Trip(super):
 
     def __init__(self, trip_data):
         self.transfers = trip_data["transfers"]
-        self.destination = trip_data["legs"][0]["destination"]["stationCode"].lower(
-        )
+        self.destination = trip_data["legs"][0]["destination"]["stationCode"].lower()
         self.origin = trip_data["legs"][0]["origin"]["stationCode"].lower()
         self.departure_time = dateutil.parser.isoparse(
             trip_data["legs"][0]["origin"]["plannedDateTime"]
@@ -100,42 +101,54 @@ class Trip(super):
         return json.dumps(vars(self), default=str, sort_keys=True, indent=2)
 
 
-def fetch_trips(origin="laa", destination="asdz"):
+def get_amsterdam_time(delta=0):
+    return datetime.now(dateutil.tz.gettz("Europe/Amsterdam")) + timedelta(hours=delta)
+
+
+def fetch_trips(origin="laa", destination="asdz", date_time=None):
     api_key = os.getenv("NS_API_KEY")
+
+    if not date_time:
+        date_time = get_amsterdam_time()
+    date_time = urllib.parse.quote_plus(date_time.strftime("%Y-%m-%dT%H:%M"))
+
+    print(f"URL call {date_time}")
+
     try:
         url = f"""
-        https://gateway.apiportal.ns.nl/reisinformatie-api/api/v3/trips?fromStation={
-            origin}&toStation={destination}"""
+        https://gateway.apiportal.ns.nl/reisinformatie-api/api/v3/trips?fromStation={origin}&toStation={destination}&dateTime={date_time}"""
 
-        hdr = {"Cache-Control": "no-cache",
-               "Ocp-Apim-Subscription-Key": api_key}
+        hdr = {"Cache-Control": "no-cache", "Ocp-Apim-Subscription-Key": api_key}
 
         req = urllib.request.Request(url, headers=hdr)
 
         req.get_method = lambda: "GET"
         r = urllib.request.urlopen(req)
-        data = json.loads(r.read().decode(
-            r.info().get_param("charset") or "utf-8"))
+        data = json.loads(r.read().decode(r.info().get_param("charset") or "utf-8"))
     except Exception as e:
         print(e)
 
     return data
 
 
-def get_trips(where_to="home"):
+def get_trips(where_to="home", date_time=None):
     if where_to == "work":
         trips_data = (
-            fetch_trips(origin="laa", destination="asdz")["trips"]
-            + fetch_trips(origin="gvc", destination="asdz")["trips"]
-            + fetch_trips(origin="laa", destination="asd")["trips"]
-            + fetch_trips(origin="gvc", destination="asd")["trips"]
+            fetch_trips(origin="laa", destination="asdz", date_time=date_time)["trips"]
+            + fetch_trips(origin="gvc", destination="asdz", date_time=date_time)[
+                "trips"
+            ]
+            + fetch_trips(origin="laa", destination="asd", date_time=date_time)["trips"]
+            + fetch_trips(origin="gvc", destination="asd", date_time=date_time)["trips"]
         )
     elif where_to == "home":
         trips_data = (
-            fetch_trips(origin="asdz", destination="gvc")["trips"]
-            + fetch_trips(origin="asdz", destination="laa")["trips"]
-            + fetch_trips(origin="asd", destination="gvc")["trips"]
-            + fetch_trips(origin="asd", destination="laa")["trips"]
+            fetch_trips(origin="asdz", destination="gvc", date_time=date_time)["trips"]
+            + fetch_trips(origin="asdz", destination="laa", date_time=date_time)[
+                "trips"
+            ]
+            + fetch_trips(origin="asd", destination="gvc", date_time=date_time)["trips"]
+            + fetch_trips(origin="asd", destination="laa", date_time=date_time)["trips"]
         )
     else:
         with open("./sample_trip.json", "r") as f:
