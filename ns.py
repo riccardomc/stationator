@@ -5,8 +5,7 @@ import json
 import itertools
 import dateutil.parser
 import dateutil.tz
-import urllib.request
-import urllib.parse
+import requests
 from datetime import datetime, timedelta
 
 
@@ -111,25 +110,26 @@ def get_amsterdam_time(delta=0):
 
 
 def fetch_trips(origin="laa", destination="asdz", date_time=None):
+    url = "https://gateway.apiportal.ns.nl/reisinformatie-api/api/v3/trips"
     api_key = os.getenv("NS_API_KEY")
 
     if not date_time:
         date_time = get_amsterdam_time()
-    date_time = urllib.parse.quote_plus(date_time.strftime("%Y-%m-%dT%H:%M"))
 
-    print(f"URL call {date_time}")
+    params = {
+        "fromStation": origin,
+        "toStation": destination,
+        "dateTime": date_time.strftime("%Y-%m-%dT%H:%M"),
+    }
+
+    headers = {
+        "Cache-Control": "no-cache",
+        "Ocp-Apim-Subscription-Key": api_key,
+    }
 
     try:
-        url = f"""
-        https://gateway.apiportal.ns.nl/reisinformatie-api/api/v3/trips?fromStation={origin}&toStation={destination}&dateTime={date_time}"""
-
-        hdr = {"Cache-Control": "no-cache", "Ocp-Apim-Subscription-Key": api_key}
-
-        req = urllib.request.Request(url, headers=hdr)
-
-        req.get_method = lambda: "GET"
-        r = urllib.request.urlopen(req)
-        data = json.loads(r.read().decode(r.info().get_param("charset") or "utf-8"))
+        r = requests.get(url, params=params, headers=headers)
+        data = r.json()
     except Exception as e:
         print(e)
 
