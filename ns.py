@@ -157,20 +157,3 @@ def get_trips(where_to="home", date_time=None):
     trips = [Trip(t) for t in trips_data if Trip(t).transfers == 0]
     trips = sorted(trips, key=lambda t: t.departure_time)
     return trips
-
-
-def get_trips_json(where_to="home", trips=None):
-    if not trips:
-        trips = get_trips(where_to)
-    trips = [vars(t) for t in trips]
-    return json.dumps(trips, indent=2, default=lambda d: d.strftime("%H:%M"))
-
-
-if __name__ == "__main__":
-
-    trips = get_trips("dev")
-
-    for t in trips:
-        print(f"{t}")
-
-    print(get_trips_json(trips=trips))
