@@ -28,6 +28,11 @@ def trains_index():
     ui.link("Trains to Home (Amsterdam - Den Haag)", "/trains/home/0")
 
 
+@ui.page("/trains/{where}")
+async def trains_where(where: str):
+    await trains_where_delta(where, 0)
+
+
 @ui.page("/trains/{where}/{delta}")
 async def trains_where_delta(where: str, delta: int):
 
