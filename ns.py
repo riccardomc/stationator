@@ -2,6 +2,7 @@
 
 import os
 import json
+import itertools
 import dateutil.parser
 import dateutil.tz
 import urllib.request
@@ -136,23 +137,18 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
 
 
 def get_trips(where_to="home", date_time=None):
+
     if where_to == "work":
-        trips_data = (
-            fetch_trips(origin="laa", destination="asdz", date_time=date_time)["trips"]
-            + fetch_trips(origin="gvc", destination="asdz", date_time=date_time)[
-                "trips"
-            ]
-            + fetch_trips(origin="laa", destination="asd", date_time=date_time)["trips"]
-            + fetch_trips(origin="gvc", destination="asd", date_time=date_time)["trips"]
+        stations = [("laa", "asdz"), ("gvc", "asdz"),
+                    ("laa", "asd"), ("gvc", "asd")]
+        trips_data = itertools.chain.from_iterable(
+            ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
     elif where_to == "home":
-        trips_data = (
-            fetch_trips(origin="asdz", destination="gvc", date_time=date_time)["trips"]
-            + fetch_trips(origin="asdz", destination="laa", date_time=date_time)[
-                "trips"
-            ]
-            + fetch_trips(origin="asd", destination="gvc", date_time=date_time)["trips"]
-            + fetch_trips(origin="asd", destination="laa", date_time=date_time)["trips"]
+        stations = [("asdz", "laa"), ("asdz", "gvc"),
+                    ("asd", "laa"), ("asd", "gvc")]
+        trips_data = itertools.chain.from_iterable(
+            ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
     else:
         with open("./sample_trip.json", "r") as f:
