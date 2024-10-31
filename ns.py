@@ -8,29 +8,6 @@ import urllib.request
 import urllib.parse
 from datetime import datetime, timedelta
 
-stations = {
-    "asd": {
-        "full_name": "Amsterdam Centraal",
-        "short_name": "asd",
-        "biking_time": "00:10",
-    },
-    "asdz": {
-        "full_name": "Amsterdam Zuid",
-        "short_name": "asdz",
-        "biking_time": "00:14",
-    },
-    "gvc": {
-        "full_name": "Den Haag Centraal",
-        "short_name": "gvc",
-        "biking_time": "00:11",
-    },
-    "laa": {
-        "full_name": "Den Haag Laan van NOI",
-        "short_name": "laa",
-        "biking_time": "00:14",
-    },
-}
-
 
 class Station(super):
 
@@ -42,9 +19,36 @@ class Station(super):
         self.biking_time = d
 
 
-# Generate Stations map
-for k, v in stations.items():
-    stations[k] = Station(v)
+stations = {
+    "asd": Station(
+        {
+            "full_name": "Amsterdam Centraal",
+            "short_name": "asd",
+            "biking_time": "00:10",
+        }
+    ),
+    "asdz": Station(
+        {
+            "full_name": "Amsterdam Zuid",
+            "short_name": "asdz",
+            "biking_time": "00:14",
+        }
+    ),
+    "gvc": Station(
+        {
+            "full_name": "Den Haag Centraal",
+            "short_name": "gvc",
+            "biking_time": "00:11",
+        }
+    ),
+    "laa": Station(
+        {
+            "full_name": "Den Haag Laan van NOI",
+            "short_name": "laa",
+            "biking_time": "00:14",
+        }
+    ),
+}
 
 
 class Trip(super):
