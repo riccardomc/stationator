@@ -8,6 +8,7 @@ columns_order = [
     "departure_time",
     "arrival_time",
     "origin",
+    "departure_track",
     "destination",
     "status",
     "leave_by",
@@ -77,12 +78,12 @@ async def trains_where_delta(where: str, delta: int):
     table.add_slot(
         "header",
         r"""
-    <q-tr :props="props">
-        <q-th v-for="col in props.cols" :key="col.name" :props="props">
-            {{ col.label }}
-        </q-th>
-    </q-tr>
-    """,
+        <q-tr :props="props">
+            <q-th v-for="col in props.cols" :key="col.name" :props="props">
+                {{ col.label }}
+            </q-th>
+        </q-tr>
+        """,
     )
 
     # update label

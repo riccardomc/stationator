@@ -63,6 +63,8 @@ class Trip(super):
         self.arrival_time = dateutil.parser.isoparse(
             trip_data["legs"][0]["destination"]["plannedDateTime"]
         )
+        self.departure_track = trip_data["legs"][0]["origin"]["actualTrack"]
+        self.destination_track = trip_data["legs"][0]["destination"]["actualTrack"]
         self.status = trip_data["status"]
         self.leave_by = self._leave_by()
         self.arrive_by = self._arrive_by()
@@ -139,14 +141,12 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
 def get_trips(where_to="home", date_time=None):
 
     if where_to == "work":
-        stations = [("laa", "asdz"), ("gvc", "asdz"),
-                    ("laa", "asd"), ("gvc", "asd")]
+        stations = [("laa", "asdz"), ("gvc", "asdz"), ("laa", "asd"), ("gvc", "asd")]
         trips_data = itertools.chain.from_iterable(
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
     elif where_to == "home":
-        stations = [("asdz", "laa"), ("asdz", "gvc"),
-                    ("asd", "laa"), ("asd", "gvc")]
+        stations = [("asdz", "laa"), ("asdz", "gvc"), ("asd", "laa"), ("asd", "gvc")]
         trips_data = itertools.chain.from_iterable(
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
