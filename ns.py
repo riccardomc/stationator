@@ -63,8 +63,8 @@ class Trip(super):
         self.arrival_time = dateutil.parser.isoparse(
             trip_data["legs"][0]["destination"]["plannedDateTime"]
         )
-        self.departure_track = trip_data["legs"][0]["origin"]["actualTrack"]
-        self.destination_track = trip_data["legs"][0]["destination"]["actualTrack"]
+        self.departure_track = trip_data["legs"][0]["origin"]["plannedTrack"]
+        self.arrival_track = trip_data["legs"][0]["destination"]["plannedTrack"]
         self.status = trip_data["status"]
         self.leave_by = self._leave_by()
         self.arrive_by = self._arrive_by()
