@@ -17,7 +17,8 @@ columns_order = [
 
 labels = ["⏰", "⏰", "🛫", "🛤️", "🛬", "☠️", "🚴", "🚴"]
 
-columns = [{"name": c, "label": l, "field": c} for c, l in zip(columns_order, labels)]
+columns = [{"name": c, "label": l, "field": c}
+           for c, l in zip(columns_order, labels)]
 
 
 @ui.page("/")
@@ -27,8 +28,8 @@ def root():
 
 @ui.page("/trains")
 def trains_index():
-    ui.link("🏠", "trtans/whome0")
-    ui.link("💼", "trtans/hwork0")
+    ui.link("🏠", "trains/home/0")
+    ui.link("💼", "trains/work/0")
 
 
 @ui.page("/trains/{where}")
