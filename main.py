@@ -15,7 +15,9 @@ columns_order = [
     "arrive_by",
 ]
 
-columns = [{"name": c, "label": c, "field": c} for c in columns_order]
+labels = ["⏰", "⏰", "🛫", "🛤️", "🛬", "☠️", "🚴", "🚴"]
+
+columns = [{"name": c, "label": l, "field": c} for c, l in zip(columns_order, labels)]
 
 
 @ui.page("/")
@@ -25,8 +27,8 @@ def root():
 
 @ui.page("/trains")
 def trains_index():
-    ui.link("Trains to Work (Den Haag - Amsterdam)", "/trains/work/0")
-    ui.link("Trains to Home (Amsterdam - Den Haag)", "/trains/home/0")
+    ui.link("🏠", "trtans/whome0")
+    ui.link("💼", "trtans/hwork0")
 
 
 @ui.page("/trains/{where}")
@@ -97,9 +99,9 @@ async def trains_where_delta(where: str, delta: int):
 
     # add back link
     with ui.row():
-        ui.link("Index", "/trains")
-        ui.link("Less", f"/trains/{where}/{delta - 1}")
-        ui.link("Plus", f"/trains/{where}/{delta + 1}")
+        ui.link("🫵", "/trains")
+        ui.link("➖", f"/trains/{where}/{delta - 1}")
+        ui.link("➕", f"/trains/{where}/{delta + 1}")
 
 
-ui.run(host="0.0.0.0", favicon="☠️", title="Stationator", show=False)
+ui.run(host="0.0.0.0", favicon="🚂", title="Stationator", show=False)
