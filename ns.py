@@ -54,21 +54,34 @@ stations = {
 class Trip(super):
 
     def __init__(self, trip_data):
-        self.transfers = trip_data["transfers"]
-        self.destination = trip_data["legs"][0]["destination"]["stationCode"].lower()
-        self.origin = trip_data["legs"][0]["origin"]["stationCode"].lower()
-        self.departure_time = dateutil.parser.isoparse(
-            trip_data["legs"][0]["origin"]["plannedDateTime"]
-        )
-        self.arrival_time = dateutil.parser.isoparse(
-            trip_data["legs"][0]["destination"]["plannedDateTime"]
-        )
-        self.departure_track = trip_data["legs"][0]["origin"]["plannedTrack"]
-        self.arrival_track = trip_data["legs"][0]["destination"]["plannedTrack"]
+
+        self.trip_data = trip_data
+        self.leg = self._leg()
+
         self.status = trip_data["status"]
+        self.transfers = trip_data["transfers"]
+
+        o = self.leg.get("origin", {})
+        self.origin = o["stationCode"].lower()
+        self.departure_track = o["plannedTrack"]
+        self.departure_time = dateutil.parser.isoparse(o["plannedDateTime"])
+
+        d = self.leg.get("destination", {})
+        self.destination = d["stationCode"].lower()
+        self.arrival_time = dateutil.parser.isoparse(d["plannedDateTime"])
+        self.arrival_track = d["plannedTrack"]
+
         self.leave_by = self._leave_by()
         self.arrive_by = self._arrive_by()
         # self.biking_time = self._biking_time()
+
+    def _leg(self):
+        legs = self.trip_data.get("legs", [])
+
+        if legs:
+            return legs[0]
+
+        return {}
 
     def _leave_by(self):
         origin_station = stations.get(self.origin, None)
@@ -141,12 +154,14 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
 def get_trips(where_to="home", date_time=None):
 
     if where_to == "work":
-        stations = [("laa", "asdz"), ("gvc", "asdz"), ("laa", "asd"), ("gvc", "asd")]
+        stations = [("laa", "asdz"), ("gvc", "asdz"),
+                    ("laa", "asd"), ("gvc", "asd")]
         trips_data = itertools.chain.from_iterable(
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
     elif where_to == "home":
-        stations = [("asdz", "laa"), ("asdz", "gvc"), ("asd", "laa"), ("asd", "gvc")]
+        stations = [("asdz", "laa"), ("asdz", "gvc"),
+                    ("asd", "laa"), ("asd", "gvc")]
         trips_data = itertools.chain.from_iterable(
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
