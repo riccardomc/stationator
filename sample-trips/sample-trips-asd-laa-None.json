@@ -1,0 +1,3067 @@
+{
+  "source": "HARP",
+  "trips": [
+    {
+      "idx": 0,
+      "uid": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:05:00+01:00|plannedArrivalTime=2024-11-08T10:54:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=1415716323",
+      "ctxRecon": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:05:00+01:00|plannedArrivalTime=2024-11-08T10:54:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=1415716323",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Amsterdam Centraal@L=1100916@a=128@$A=1@O=Den Haag Laan v NOI@L=1101097@a=128@$202411081005$202411081054$IC 2328 $$3$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#1#HIN#0#ECK#150365|150365|150414|150414|0|0|325|150363|1|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 49,
+      "actualDurationInMinutes": 49,
+      "transfers": 0,
+      "status": "NORMAL",
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "IC 2328",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Vlissingen",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860380#TA#0#DA#81124#1S#1100916#1T#1005#LS#1101755#LT#1251#PU#784#RT#3#CA#IC#ZE#2328#ZB#IC 2328 #PC#1#FR#1100916#FT#1005#TO#1101755#TT#1251#",
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:05:00+0100",
+            "plannedTrack": "2a",
+            "actualTrack": "2a",
+            "checkinStatus": "CHECKIN",
+            "notes": []
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:54:00+0100",
+            "plannedTrack": "5",
+            "actualTrack": "5",
+            "exitSide": "RIGHT",
+            "checkinStatus": "CHECKOUT",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "2328",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Intercity",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Intercity",
+                  "shortValue": "NS Intercity",
+                  "accessibilityValue": "NS Intercity",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Vlissingen",
+                  "shortValue": "richting Vlissingen",
+                  "accessibilityValue": "richting Vlissingen",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "4 tussenstops",
+                  "shortValue": "4 tussenstops",
+                  "accessibilityValue": "4 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400058",
+              "name": "Amsterdam Centraal",
+              "lat": 52.3788871765137,
+              "lng": 4.90027761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:05:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "2a",
+              "plannedDepartureTrack": "2a",
+              "plannedArrivalTrack": "2a",
+              "actualArrivalTrack": "2a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400059",
+              "name": "Amsterdam Sloterdijk",
+              "lat": 52.3888893127441,
+              "lng": 4.83777761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T10:10:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:10:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "7",
+              "plannedDepartureTrack": "7",
+              "plannedArrivalTrack": "7",
+              "actualArrivalTrack": "7",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400285",
+              "name": "Haarlem",
+              "lat": 52.3877792358398,
+              "lng": 4.63833332061768,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T10:21:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:20:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "6",
+              "plannedDepartureTrack": "6",
+              "plannedArrivalTrack": "6",
+              "actualArrivalTrack": "6",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400302",
+              "name": "Heemstede-Aerdenhout",
+              "lat": 52.3591651916504,
+              "lng": 4.60666656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:26:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:26:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T10:45:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:40:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "8b",
+              "plannedDepartureTrack": "8b",
+              "plannedArrivalTrack": "8b",
+              "actualArrivalTrack": "8b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 12,
+              "plannedArrivalDateTime": "2024-11-08T10:54:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5",
+              "plannedDepartureTrack": "5",
+              "plannedArrivalTrack": "5",
+              "actualArrivalTrack": "5",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 0,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860380#TA#0#DA#81124#1S#1100916#1T#1005#LS#1101755#LT#1251#PU#784#RT#3#CA#IC#ZE#2328#ZB#IC 2328 #PC#1#FR#1100916#FT#1005#TO#1101755#TT#1251#&train=2328&datetime=2024-11-08T10:05:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 49,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "49 min.",
+            "accessibilityValue": "49 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "5c954eff_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=LRIdIZCHcg==",
+        "origin": {
+          "varCode": 58,
+          "name": "Amsterdam Centraal"
+        },
+        "destination": {
+          "varCode": 380,
+          "name": "Den Haag Laan v NOI"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2278,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1340,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1822,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1072,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1367,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 804,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4556,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2680,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3644,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2144,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2734,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1608,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 66350,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 39260,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 53110,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 31240,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 637320,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 374880,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [
+        {
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION"
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION"
+          },
+          "operator": "NS",
+          "productTypes": [
+            "TRAIN"
+          ],
+          "fares": [
+            {
+              "priceInCents": 1340,
+              "priceInCentsExcludingSupplement": 1340,
+              "supplementInCents": 0,
+              "buyableTicketSupplementPriceInCents": 0,
+              "product": "OVCHIPKAART_ENKELE_REIS",
+              "travelClass": "SECOND_CLASS",
+              "discountType": "NO_DISCOUNT"
+            }
+          ]
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1340,
+        "priceInCentsExcludingSupplement": 1340,
+        "buyableTicketPriceInCents": 1340,
+        "buyableTicketPriceInCentsExcludingSupplement": 1340,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/ASD/LAA/20241108/1005/1054?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A05%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A54%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D1415716323"
+      },
+      "realtime": true,
+      "routeId": "=LRIdIZCHcg==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A05%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A54%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D1415716323&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Intercity",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "2a",
+          "accessibilityName": "Intercity"
+        }
+      ]
+    },
+    {
+      "idx": 1,
+      "uid": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:11:00+01:00|plannedArrivalTime=2024-11-08T11:05:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=1014107387",
+      "ctxRecon": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:11:00+01:00|plannedArrivalTime=2024-11-08T11:05:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=1014107387",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Amsterdam Centraal@L=1100768@a=128@$A=1@O=Den Haag Laan v NOI@L=1101100@a=128@$202411081011$202411081105$SPR 4626$$3$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#1#HIN#0#ECK#150371|150371|150425|150425|0|0|325|150366|2|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 54,
+      "actualDurationInMinutes": 54,
+      "transfers": 0,
+      "status": "NORMAL",
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 4626",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Den Haag Centraal",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860238#TA#0#DA#81124#1S#1101245#1T#925#LS#1100762#LT#1108#PU#784#RT#3#CA#SPR#ZE#4626#ZB#SPR 4626#PC#3#FR#1101245#FT#925#TO#1100762#TT#1108#",
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:11:00+0100",
+            "plannedTrack": "11a",
+            "actualTrack": "13a",
+            "checkinStatus": "CHECKIN",
+            "notes": []
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T11:05:00+0100",
+            "plannedTrack": "3",
+            "actualTrack": "3",
+            "exitSide": "RIGHT",
+            "checkinStatus": "CHECKOUT",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "4626",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Den Haag Centraal",
+                  "shortValue": "richting Den Haag Centraal",
+                  "accessibilityValue": "richting Den Haag Centraal",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "10 tussenstops",
+                  "shortValue": "10 tussenstops",
+                  "accessibilityValue": "10 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400058",
+              "name": "Amsterdam Centraal",
+              "lat": 52.3788871765137,
+              "lng": 4.90027761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:11:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "13a",
+              "plannedDepartureTrack": "11a",
+              "plannedArrivalTrack": "11a",
+              "actualArrivalTrack": "13a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400059",
+              "name": "Amsterdam Sloterdijk",
+              "lat": 52.3888893127441,
+              "lng": 4.83777761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T10:17:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:17:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "11",
+              "plannedDepartureTrack": "11",
+              "plannedArrivalTrack": "11",
+              "actualArrivalTrack": "11",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 2,
+              "plannedDepartureDateTime": "2024-11-08T10:21:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:21:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 3,
+              "plannedDepartureDateTime": "2024-11-08T10:29:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:27:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5-6",
+              "plannedDepartureTrack": "5-6",
+              "plannedArrivalTrack": "5-6",
+              "actualArrivalTrack": "5-6",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T10:33:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:33:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400460",
+              "name": "Nieuw Vennep",
+              "lat": 52.2588882446289,
+              "lng": 4.64555549621582,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:37:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:37:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400603",
+              "name": "Sassenheim",
+              "lat": 52.215278,
+              "lng": 4.517222,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 6,
+              "plannedDepartureDateTime": "2024-11-08T10:44:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:44:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 7,
+              "plannedDepartureDateTime": "2024-11-08T10:50:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:49:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "8a",
+              "plannedDepartureTrack": "8a",
+              "plannedArrivalTrack": "8a",
+              "actualArrivalTrack": "8a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400188",
+              "name": "De Vink",
+              "lat": 52.1472206115723,
+              "lng": 4.4563889503479,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T10:54:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:54:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400659",
+              "name": "Voorschoten",
+              "lat": 52.1252784729004,
+              "lng": 4.43249988555908,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T10:57:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:57:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400278",
+              "name": "Den Haag Mariahoeve",
+              "lat": 52.0905570983887,
+              "lng": 4.36944437026978,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedDepartureDateTime": "2024-11-08T11:02:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:02:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 11,
+              "plannedArrivalDateTime": "2024-11-08T11:05:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "3",
+              "plannedDepartureTrack": "3",
+              "plannedArrivalTrack": "3",
+              "actualArrivalTrack": "3",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "MEDIUM",
+          "bicycleSpotCount": 4,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860238#TA#0#DA#81124#1S#1101245#1T#925#LS#1100762#LT#1108#PU#784#RT#3#CA#SPR#ZE#4626#ZB#SPR 4626#PC#3#FR#1101245#FT#925#TO#1100762#TT#1108#&train=4626&datetime=2024-11-08T10:11:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 54,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "54 min.",
+            "accessibilityValue": "54 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "6714cd27_3",
+      "crowdForecast": "MEDIUM",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=LRIdIZCHcg==",
+        "origin": {
+          "varCode": 58,
+          "name": "Amsterdam Centraal"
+        },
+        "destination": {
+          "varCode": 380,
+          "name": "Den Haag Laan v NOI"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2278,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1340,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1822,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1072,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1367,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 804,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4556,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2680,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3644,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2144,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2734,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1608,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 66350,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 39260,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 53110,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 31240,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 637320,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 374880,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [
+        {
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION"
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION"
+          },
+          "operator": "NS",
+          "productTypes": [
+            "TRAIN"
+          ],
+          "fares": [
+            {
+              "priceInCents": 1340,
+              "priceInCentsExcludingSupplement": 1340,
+              "supplementInCents": 0,
+              "buyableTicketSupplementPriceInCents": 0,
+              "product": "OVCHIPKAART_ENKELE_REIS",
+              "travelClass": "SECOND_CLASS",
+              "discountType": "NO_DISCOUNT"
+            }
+          ]
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1340,
+        "priceInCentsExcludingSupplement": 1340,
+        "buyableTicketPriceInCents": 1340,
+        "buyableTicketPriceInCentsExcludingSupplement": 1340,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/ASD/LAA/20241108/1011/1105?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A11%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A05%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D1014107387"
+      },
+      "realtime": true,
+      "routeId": "=LRIdIZCHcg==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A11%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A05%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D1014107387&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "13a",
+          "accessibilityName": "Sprinter"
+        }
+      ]
+    },
+    {
+      "idx": 2,
+      "uid": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:20:00+01:00|plannedArrivalTime=2024-11-08T11:08:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=3611582613",
+      "ctxRecon": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:20:00+01:00|plannedArrivalTime=2024-11-08T11:08:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=3611582613",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Amsterdam Centraal@L=1100916@a=128@$A=1@O=Den Haag Laan v NOI@L=1101097@a=128@$202411081020$202411081108$IC703730$$3$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#1#HIN#0#ECK#150380|150380|150428|150428|0|0|325|150372|3|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 48,
+      "actualDurationInMinutes": 48,
+      "transfers": 0,
+      "status": "NORMAL",
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "IC 703730",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Dordrecht",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860512#TA#0#DA#81124#1S#1100916#1T#1020#LS#1101068#LT#1153#PU#784#RT#3#CA#IC#ZE#703730#ZB#IC703730#PC#1#FR#1100916#FT#1020#TO#1101068#TT#1153#",
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:20:00+0100",
+            "plannedTrack": "2a",
+            "actualTrack": "2a",
+            "checkinStatus": "CHECKIN",
+            "notes": []
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T11:08:00+0100",
+            "plannedTrack": "5",
+            "actualTrack": "5",
+            "exitSide": "RIGHT",
+            "checkinStatus": "CHECKOUT",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "703730",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Intercity",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Intercity",
+                  "shortValue": "NS Intercity",
+                  "accessibilityValue": "NS Intercity",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Dordrecht",
+                  "shortValue": "richting Dordrecht",
+                  "accessibilityValue": "richting Dordrecht",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "4 tussenstops",
+                  "shortValue": "4 tussenstops",
+                  "accessibilityValue": "4 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400058",
+              "name": "Amsterdam Centraal",
+              "lat": 52.3788871765137,
+              "lng": 4.90027761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:20:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "2a",
+              "plannedDepartureTrack": "2a",
+              "plannedArrivalTrack": "2a",
+              "actualArrivalTrack": "2a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400059",
+              "name": "Amsterdam Sloterdijk",
+              "lat": 52.3888893127441,
+              "lng": 4.83777761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T10:25:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:25:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "7",
+              "plannedDepartureTrack": "7",
+              "plannedArrivalTrack": "7",
+              "actualArrivalTrack": "7",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400285",
+              "name": "Haarlem",
+              "lat": 52.3877792358398,
+              "lng": 4.63833332061768,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T10:37:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:35:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "6",
+              "plannedDepartureTrack": "6",
+              "plannedArrivalTrack": "6",
+              "actualArrivalTrack": "6",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400302",
+              "name": "Heemstede-Aerdenhout",
+              "lat": 52.3591651916504,
+              "lng": 4.60666656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:42:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:42:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T11:00:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:57:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "9b",
+              "plannedDepartureTrack": "9b",
+              "plannedArrivalTrack": "9b",
+              "actualArrivalTrack": "9b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 12,
+              "plannedArrivalDateTime": "2024-11-08T11:08:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5",
+              "plannedDepartureTrack": "5",
+              "plannedArrivalTrack": "5",
+              "actualArrivalTrack": "5",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 0,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860512#TA#0#DA#81124#1S#1100916#1T#1020#LS#1101068#LT#1153#PU#784#RT#3#CA#IC#ZE#703730#ZB#IC703730#PC#1#FR#1100916#FT#1020#TO#1101068#TT#1153#&train=703730&datetime=2024-11-08T10:20:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 48,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "48 min.",
+            "accessibilityValue": "48 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "36c97ab4_3",
+      "crowdForecast": "LOW",
+      "optimal": true,
+      "fareRoute": {
+        "routeId": "=LRIdIZCHcg==",
+        "origin": {
+          "varCode": 58,
+          "name": "Amsterdam Centraal"
+        },
+        "destination": {
+          "varCode": 380,
+          "name": "Den Haag Laan v NOI"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2278,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1340,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1822,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1072,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1367,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 804,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4556,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2680,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3644,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2144,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2734,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1608,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 66350,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 39260,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 53110,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 31240,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 637320,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 374880,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [
+        {
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION"
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION"
+          },
+          "operator": "NS",
+          "productTypes": [
+            "TRAIN"
+          ],
+          "fares": [
+            {
+              "priceInCents": 1340,
+              "priceInCentsExcludingSupplement": 1340,
+              "supplementInCents": 0,
+              "buyableTicketSupplementPriceInCents": 0,
+              "product": "OVCHIPKAART_ENKELE_REIS",
+              "travelClass": "SECOND_CLASS",
+              "discountType": "NO_DISCOUNT"
+            }
+          ]
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1340,
+        "priceInCentsExcludingSupplement": 1340,
+        "buyableTicketPriceInCents": 1340,
+        "buyableTicketPriceInCentsExcludingSupplement": 1340,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/ASD/LAA/20241108/1020/1108?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A20%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A08%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D3611582613"
+      },
+      "realtime": true,
+      "routeId": "=LRIdIZCHcg==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A20%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A08%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D3611582613&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Intercity",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "2a",
+          "accessibilityName": "Intercity"
+        }
+      ]
+    },
+    {
+      "idx": 3,
+      "uid": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:35:00+01:00|plannedArrivalTime=2024-11-08T11:24:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=2264566835",
+      "ctxRecon": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:35:00+01:00|plannedArrivalTime=2024-11-08T11:24:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=2264566835",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Amsterdam Centraal@L=1100916@a=128@$A=1@O=Den Haag Laan v NOI@L=1101097@a=128@$202411081035$202411081124$IC 2230 $$3$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#1#HIN#0#ECK#150395|150395|150444|150444|0|0|325|150381|4|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 49,
+      "actualDurationInMinutes": 49,
+      "transfers": 0,
+      "status": "NORMAL",
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "IC 2230",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Vlissingen",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#862736#TA#0#DA#81124#1S#1100916#1T#1035#LS#1100748#LT#1339#PU#784#RT#3#CA#IC#ZE#2230#ZB#IC 2230 #PC#1#FR#1100916#FT#1035#TO#1100748#TT#1339#",
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:35:00+0100",
+            "plannedTrack": "2a",
+            "actualTrack": "2a",
+            "checkinStatus": "CHECKIN",
+            "notes": []
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T11:24:00+0100",
+            "plannedTrack": "5",
+            "actualTrack": "5",
+            "exitSide": "RIGHT",
+            "checkinStatus": "CHECKOUT",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "2230",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Intercity",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Intercity",
+                  "shortValue": "NS Intercity",
+                  "accessibilityValue": "NS Intercity",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Vlissingen",
+                  "shortValue": "richting Vlissingen",
+                  "accessibilityValue": "richting Vlissingen",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "4 tussenstops",
+                  "shortValue": "4 tussenstops",
+                  "accessibilityValue": "4 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400058",
+              "name": "Amsterdam Centraal",
+              "lat": 52.3788871765137,
+              "lng": 4.90027761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:35:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "2a",
+              "plannedDepartureTrack": "2a",
+              "plannedArrivalTrack": "2a",
+              "actualArrivalTrack": "2a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400059",
+              "name": "Amsterdam Sloterdijk",
+              "lat": 52.3888893127441,
+              "lng": 4.83777761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T10:40:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:40:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "7",
+              "plannedDepartureTrack": "7",
+              "plannedArrivalTrack": "7",
+              "actualArrivalTrack": "7",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400285",
+              "name": "Haarlem",
+              "lat": 52.3877792358398,
+              "lng": 4.63833332061768,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T10:51:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:50:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "6",
+              "plannedDepartureTrack": "6",
+              "plannedArrivalTrack": "6",
+              "actualArrivalTrack": "6",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400302",
+              "name": "Heemstede-Aerdenhout",
+              "lat": 52.3591651916504,
+              "lng": 4.60666656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:56:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:56:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T11:15:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:10:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "8b",
+              "plannedDepartureTrack": "8b",
+              "plannedArrivalTrack": "8b",
+              "actualArrivalTrack": "8b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 12,
+              "plannedArrivalDateTime": "2024-11-08T11:24:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5",
+              "plannedDepartureTrack": "5",
+              "plannedArrivalTrack": "5",
+              "actualArrivalTrack": "5",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 0,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#862736#TA#0#DA#81124#1S#1100916#1T#1035#LS#1100748#LT#1339#PU#784#RT#3#CA#IC#ZE#2230#ZB#IC 2230 #PC#1#FR#1100916#FT#1035#TO#1100748#TT#1339#&train=2230&datetime=2024-11-08T10:35:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 49,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "49 min.",
+            "accessibilityValue": "49 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "a9f98080_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=LRIdIZCHcg==",
+        "origin": {
+          "varCode": 58,
+          "name": "Amsterdam Centraal"
+        },
+        "destination": {
+          "varCode": 380,
+          "name": "Den Haag Laan v NOI"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2278,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1340,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1822,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1072,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1367,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 804,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4556,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2680,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3644,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2144,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2734,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1608,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 66350,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 39260,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 53110,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 31240,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 637320,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 374880,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [
+        {
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION"
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION"
+          },
+          "operator": "NS",
+          "productTypes": [
+            "TRAIN"
+          ],
+          "fares": [
+            {
+              "priceInCents": 1340,
+              "priceInCentsExcludingSupplement": 1340,
+              "supplementInCents": 0,
+              "buyableTicketSupplementPriceInCents": 0,
+              "product": "OVCHIPKAART_ENKELE_REIS",
+              "travelClass": "SECOND_CLASS",
+              "discountType": "NO_DISCOUNT"
+            }
+          ]
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1340,
+        "priceInCentsExcludingSupplement": 1340,
+        "buyableTicketPriceInCents": 1340,
+        "buyableTicketPriceInCentsExcludingSupplement": 1340,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/ASD/LAA/20241108/1035/1124?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A35%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A24%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D2264566835"
+      },
+      "realtime": true,
+      "routeId": "=LRIdIZCHcg==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A35%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A24%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D2264566835&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Intercity",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "2a",
+          "accessibilityName": "Intercity"
+        }
+      ]
+    },
+    {
+      "idx": 4,
+      "uid": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:41:00+01:00|plannedArrivalTime=2024-11-08T11:35:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=2210147557",
+      "ctxRecon": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:41:00+01:00|plannedArrivalTime=2024-11-08T11:35:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=2210147557",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Amsterdam Centraal@L=1100903@a=128@$A=1@O=Den Haag Laan v NOI@L=1101100@a=128@$202411081041$202411081135$SPR 4628$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#1#HIN#0#ECK#150401|150401|150455|150455|0|0|325|150396|5|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 54,
+      "actualDurationInMinutes": 54,
+      "transfers": 0,
+      "status": "NORMAL",
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 4628",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Den Haag Centraal",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#734023#TA#0#DA#81124#1S#1101245#1T#955#LS#1100762#LT#1138#PU#784#RT#1#CA#SPR#ZE#4628#ZB#SPR 4628#PC#3#FR#1101245#FT#955#TO#1100762#TT#1138#",
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:41:00+0100",
+            "plannedTrack": "13b",
+            "actualTrack": "13b",
+            "checkinStatus": "CHECKIN",
+            "notes": []
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T11:35:00+0100",
+            "plannedTrack": "3",
+            "actualTrack": "3",
+            "exitSide": "RIGHT",
+            "checkinStatus": "CHECKOUT",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "4628",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Den Haag Centraal",
+                  "shortValue": "richting Den Haag Centraal",
+                  "accessibilityValue": "richting Den Haag Centraal",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "10 tussenstops",
+                  "shortValue": "10 tussenstops",
+                  "accessibilityValue": "10 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400058",
+              "name": "Amsterdam Centraal",
+              "lat": 52.3788871765137,
+              "lng": 4.90027761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:41:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "13b",
+              "plannedDepartureTrack": "13b",
+              "plannedArrivalTrack": "13b",
+              "actualArrivalTrack": "13b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400059",
+              "name": "Amsterdam Sloterdijk",
+              "lat": 52.3888893127441,
+              "lng": 4.83777761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T10:47:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:47:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "11",
+              "plannedDepartureTrack": "11",
+              "plannedArrivalTrack": "11",
+              "actualArrivalTrack": "11",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 2,
+              "plannedDepartureDateTime": "2024-11-08T10:51:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:51:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 3,
+              "plannedDepartureDateTime": "2024-11-08T10:59:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:58:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5-6",
+              "plannedDepartureTrack": "5-6",
+              "plannedArrivalTrack": "5-6",
+              "actualArrivalTrack": "5-6",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T11:03:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:03:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400460",
+              "name": "Nieuw Vennep",
+              "lat": 52.2588882446289,
+              "lng": 4.64555549621582,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T11:07:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:07:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400603",
+              "name": "Sassenheim",
+              "lat": 52.215278,
+              "lng": 4.517222,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 6,
+              "plannedDepartureDateTime": "2024-11-08T11:14:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:14:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 7,
+              "plannedDepartureDateTime": "2024-11-08T11:20:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:19:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "8a",
+              "plannedDepartureTrack": "8a",
+              "plannedArrivalTrack": "8a",
+              "actualArrivalTrack": "8a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400188",
+              "name": "De Vink",
+              "lat": 52.1472206115723,
+              "lng": 4.4563889503479,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T11:24:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:24:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400659",
+              "name": "Voorschoten",
+              "lat": 52.1252784729004,
+              "lng": 4.43249988555908,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T11:27:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:27:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400278",
+              "name": "Den Haag Mariahoeve",
+              "lat": 52.0905570983887,
+              "lng": 4.36944437026978,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedDepartureDateTime": "2024-11-08T11:32:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:32:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1",
+              "plannedDepartureTrack": "1",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 11,
+              "plannedArrivalDateTime": "2024-11-08T11:35:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "3",
+              "plannedDepartureTrack": "3",
+              "plannedArrivalTrack": "3",
+              "actualArrivalTrack": "3",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "MEDIUM",
+          "bicycleSpotCount": 4,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#734023#TA#0#DA#81124#1S#1101245#1T#955#LS#1100762#LT#1138#PU#784#RT#1#CA#SPR#ZE#4628#ZB#SPR 4628#PC#3#FR#1101245#FT#955#TO#1100762#TT#1138#&train=4628&datetime=2024-11-08T10:41:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 54,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "54 min.",
+            "accessibilityValue": "54 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "e6a3759b_3",
+      "crowdForecast": "MEDIUM",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=LRIdIZCHcg==",
+        "origin": {
+          "varCode": 58,
+          "name": "Amsterdam Centraal"
+        },
+        "destination": {
+          "varCode": 380,
+          "name": "Den Haag Laan v NOI"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2278,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1340,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1822,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1072,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1367,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 804,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4556,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2680,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3644,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2144,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2734,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1608,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 66350,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 39260,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 53110,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 31240,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 637320,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 374880,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [
+        {
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION"
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION"
+          },
+          "operator": "NS",
+          "productTypes": [
+            "TRAIN"
+          ],
+          "fares": [
+            {
+              "priceInCents": 1340,
+              "priceInCentsExcludingSupplement": 1340,
+              "supplementInCents": 0,
+              "buyableTicketSupplementPriceInCents": 0,
+              "product": "OVCHIPKAART_ENKELE_REIS",
+              "travelClass": "SECOND_CLASS",
+              "discountType": "NO_DISCOUNT"
+            }
+          ]
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1340,
+        "priceInCentsExcludingSupplement": 1340,
+        "buyableTicketPriceInCents": 1340,
+        "buyableTicketPriceInCentsExcludingSupplement": 1340,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/ASD/LAA/20241108/1041/1135?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A41%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A35%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D2210147557"
+      },
+      "realtime": true,
+      "routeId": "=LRIdIZCHcg==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A41%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A35%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D2210147557&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "13b",
+          "accessibilityName": "Sprinter"
+        }
+      ]
+    },
+    {
+      "idx": 5,
+      "uid": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:50:00+01:00|plannedArrivalTime=2024-11-08T11:38:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=289565398",
+      "ctxRecon": "arnu|fromStation=8400058|toStation=8400380|plannedFromTime=2024-11-08T10:50:00+01:00|plannedArrivalTime=2024-11-08T11:38:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=289565398",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Amsterdam Centraal@L=1100916@a=128@$A=1@O=Den Haag Laan v NOI@L=1101097@a=128@$202411081050$202411081138$IC703732$$3$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#1#HIN#0#ECK#150410|150410|150458|150458|0|0|325|150402|6|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 48,
+      "actualDurationInMinutes": 48,
+      "transfers": 0,
+      "status": "NORMAL",
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "IC 703732",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Dordrecht",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860085#TA#0#DA#81124#1S#1100916#1T#1050#LS#1101068#LT#1223#PU#784#RT#3#CA#IC#ZE#703732#ZB#IC703732#PC#1#FR#1100916#FT#1050#TO#1101068#TT#1223#",
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:50:00+0100",
+            "plannedTrack": "2a",
+            "actualTrack": "2a",
+            "checkinStatus": "CHECKIN",
+            "notes": []
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T11:38:00+0100",
+            "plannedTrack": "5",
+            "actualTrack": "5",
+            "exitSide": "RIGHT",
+            "checkinStatus": "CHECKOUT",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "703732",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Intercity",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Intercity",
+                  "shortValue": "NS Intercity",
+                  "accessibilityValue": "NS Intercity",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Dordrecht",
+                  "shortValue": "richting Dordrecht",
+                  "accessibilityValue": "richting Dordrecht",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "4 tussenstops",
+                  "shortValue": "4 tussenstops",
+                  "accessibilityValue": "4 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400058",
+              "name": "Amsterdam Centraal",
+              "lat": 52.3788871765137,
+              "lng": 4.90027761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:50:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "2a",
+              "plannedDepartureTrack": "2a",
+              "plannedArrivalTrack": "2a",
+              "actualArrivalTrack": "2a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400059",
+              "name": "Amsterdam Sloterdijk",
+              "lat": 52.3888893127441,
+              "lng": 4.83777761459351,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T10:55:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:55:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "7",
+              "plannedDepartureTrack": "7",
+              "plannedArrivalTrack": "7",
+              "actualArrivalTrack": "7",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400285",
+              "name": "Haarlem",
+              "lat": 52.3877792358398,
+              "lng": 4.63833332061768,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T11:07:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:05:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "6",
+              "plannedDepartureTrack": "6",
+              "plannedArrivalTrack": "6",
+              "actualArrivalTrack": "6",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400302",
+              "name": "Heemstede-Aerdenhout",
+              "lat": 52.3591651916504,
+              "lng": 4.60666656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T11:12:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:12:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T11:30:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T11:27:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "9b",
+              "plannedDepartureTrack": "9b",
+              "plannedArrivalTrack": "9b",
+              "actualArrivalTrack": "9b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 12,
+              "plannedArrivalDateTime": "2024-11-08T11:38:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5",
+              "plannedDepartureTrack": "5",
+              "plannedArrivalTrack": "5",
+              "actualArrivalTrack": "5",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 0,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#860085#TA#0#DA#81124#1S#1100916#1T#1050#LS#1101068#LT#1223#PU#784#RT#3#CA#IC#ZE#703732#ZB#IC703732#PC#1#FR#1100916#FT#1050#TO#1101068#TT#1223#&train=703732&datetime=2024-11-08T10:50:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 48,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "48 min.",
+            "accessibilityValue": "48 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "2df6d204_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=LRIdIZCHcg==",
+        "origin": {
+          "varCode": 58,
+          "name": "Amsterdam Centraal"
+        },
+        "destination": {
+          "varCode": 380,
+          "name": "Den Haag Laan v NOI"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2278,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1340,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1822,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1072,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1367,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 804,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4556,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2680,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3644,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2144,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2734,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1608,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 66350,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 39260,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 53110,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 31240,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 637320,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 374880,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [
+        {
+          "origin": {
+            "name": "Amsterdam Centraal",
+            "lng": 4.90027761459351,
+            "lat": 52.3788871765137,
+            "countryCode": "NL",
+            "uicCode": "8400058",
+            "stationCode": "ASD",
+            "type": "STATION"
+          },
+          "destination": {
+            "name": "Den Haag Laan v NOI",
+            "lng": 4.34277772903442,
+            "lat": 52.0786094665527,
+            "countryCode": "NL",
+            "uicCode": "8400380",
+            "stationCode": "LAA",
+            "type": "STATION"
+          },
+          "operator": "NS",
+          "productTypes": [
+            "TRAIN"
+          ],
+          "fares": [
+            {
+              "priceInCents": 1340,
+              "priceInCentsExcludingSupplement": 1340,
+              "supplementInCents": 0,
+              "buyableTicketSupplementPriceInCents": 0,
+              "product": "OVCHIPKAART_ENKELE_REIS",
+              "travelClass": "SECOND_CLASS",
+              "discountType": "NO_DISCOUNT"
+            }
+          ]
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1340,
+        "priceInCentsExcludingSupplement": 1340,
+        "buyableTicketPriceInCents": 1340,
+        "buyableTicketPriceInCentsExcludingSupplement": 1340,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/ASD/LAA/20241108/1050/1138?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A50%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A38%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D289565398"
+      },
+      "realtime": true,
+      "routeId": "=LRIdIZCHcg==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400058%7CtoStation%3D8400380%7CplannedFromTime%3D2024-11-08T10%3A50%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A38%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D289565398&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400058&destinationUicCode=8400380&dateTime=2024-11-08T10%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Intercity",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "2a",
+          "accessibilityName": "Intercity"
+        }
+      ]
+    }
+  ],
+  "scrollRequestBackwardContext": "3|OB|MT\u00b514\u00b5150365\u00b5150365\u00b5150414\u00b5150414\u00b50\u00b50\u00b5325\u00b5150363\u00b51\u00b50\u00b510\u00b50\u00b50\u00b5-2147483648\u00b51\u00b52|PDH\u00b52b800e127c9355155a8494776ceda11f|RD\u00b58112024|RT\u00b5100300|US\u00b50|RS\u00b5INIT",
+  "scrollRequestForwardContext": "3|OF|MT\u00b514\u00b5150410\u00b5150410\u00b5150458\u00b5150458\u00b50\u00b50\u00b5325\u00b5150402\u00b56\u00b50\u00b510\u00b50\u00b50\u00b5-2147483648\u00b51\u00b52|PDH\u00b52b800e127c9355155a8494776ceda11f|RD\u00b58112024|RT\u00b5100300|US\u00b50|RS\u00b5INIT"
+}

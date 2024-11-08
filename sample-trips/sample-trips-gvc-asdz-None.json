@@ -1,0 +1,4565 @@
+{
+  "source": "HARP",
+  "trips": [
+    {
+      "idx": 0,
+      "uid": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:15:00+01:00|plannedArrivalTime=2024-11-08T10:09:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=3730775865",
+      "ctxRecon": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:15:00+01:00|plannedArrivalTime=2024-11-08T10:09:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=3730775865",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Den Haag Centraal@L=1100993@a=128@$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$202411080915$202411081000$SPR 3326$$1$$$$$$\u00a7W$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$202411081000$202411081002$$$1$$$$$$\u00a7T$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$A=1@O=Metrostation Amsterdam Zuid@L=1103330@a=128@$202411081002$202411081009$MT925783$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#3#HIN#0#ECK#150315|150315|150369|150369|0|0|325|150303|1|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 54,
+      "actualDurationInMinutes": 54,
+      "transfers": 1,
+      "status": "ALTERNATIVE_TRANSPORT",
+      "primaryMessage": {
+        "title": "Alternatief vervoer",
+        "nesProperties": {
+          "color": "text-warning-contrast",
+          "type": "warning",
+          "icon": "alert"
+        },
+        "type": "ALTERNATIVE_TRANSPORT"
+      },
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 3326",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Hoorn Kersenboogerd",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#3749#TA#3#DA#81124#1S#1100993#1T#915#LS#1101042#LT#1043#PU#784#RT#1#CA#SPR#ZE#3326#ZB#SPR 3326#PC#3#FR#1100993#FT#915#TO#1101042#TT#1043#",
+          "origin": {
+            "name": "Den Haag Centraal",
+            "lng": 4.32499980926514,
+            "lat": 52.0802764892578,
+            "countryCode": "NL",
+            "uicCode": "8400282",
+            "stationCode": "GVC",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T09:15:00+0100",
+            "plannedTrack": "10",
+            "actualTrack": "10",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:00:00+0100",
+            "plannedTrack": "2",
+            "actualTrack": "2",
+            "exitSide": "LEFT",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "3326",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Hoorn Kersenboogerd",
+                  "shortValue": "richting Hoorn Kersenboogerd",
+                  "accessibilityValue": "richting Hoorn Kersenboogerd",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "3 tussenstops",
+                  "shortValue": "3 tussenstops",
+                  "accessibilityValue": "3 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400282",
+              "name": "Den Haag Centraal",
+              "lat": 52.0802764892578,
+              "lng": 4.32499980926514,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T09:15:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "10",
+              "plannedDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T09:32:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:27:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5b",
+              "plannedDepartureTrack": "5b",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T09:47:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:44:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T09:53:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:52:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1-2",
+              "plannedDepartureTrack": "1-2",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedArrivalDateTime": "2024-11-08T10:00:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 4,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#3749#TA#3#DA#81124#1S#1100993#1T#915#LS#1101042#LT#1043#PU#784#RT#1#CA#SPR#ZE#3326#ZB#SPR 3326#PC#3#FR#1100993#FT#915#TO#1101042#TT#1043#&train=3326&datetime=2024-11-08T09:15:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 45,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "45 min.",
+            "accessibilityValue": "45 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "1",
+          "travelType": "WALK",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:00:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:02:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "type": "WALK",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "walk"
+            },
+            "notes": [
+              [
+                {
+                  "value": "Loop 13 meter",
+                  "shortValue": "Loop 13 meter",
+                  "accessibilityValue": "Loop 13 meter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:00:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:02:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "reachable": true,
+          "plannedDurationInMinutes": 2,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": true
+            }
+          },
+          "duration": {
+            "value": "2 min.",
+            "accessibilityValue": "2 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "2",
+          "name": "MTS 925783",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Zuid",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": true,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725708#TA#4#DA#81124#1S#1103329#1T#1002#LS#1103330#LT#1009#PU#784#RT#1#CA#MTS#ZE#925783#ZB#MT925783#PC#3#FR#1103329#FT#1002#TO#1103330#TT#1009#",
+          "origin": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:02:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+            "lng": 4.874338,
+            "lat": 52.339234,
+            "countryCode": "NL",
+            "uicCode": "8400061",
+            "stationCode": "ASDZ",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:09:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "925783",
+            "categoryCode": "MTS",
+            "shortCategoryName": "MTS",
+            "longCategoryName": "Metro i.p.v. trein",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Metro i.p.v. trein",
+            "nameNesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning",
+              "styles": {
+                "type": "TextStyles",
+                "strikethrough": false,
+                "bold": true
+              }
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "mts"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Metro i.p.v. trein",
+                  "shortValue": "NS Metro i.p.v. trein",
+                  "accessibilityValue": "NS Metro i.p.v. trein",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-warning-contrast",
+                    "type": "warning",
+                    "styles": {
+                      "type": "TextStyles",
+                      "strikethrough": false,
+                      "bold": true
+                    }
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amsterdam Zuid",
+                  "shortValue": "richting Amsterdam Zuid",
+                  "accessibilityValue": "richting Amsterdam Zuid",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "Geen tussenstops",
+                  "shortValue": "Geen tussenstops",
+                  "accessibilityValue": "Geen tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ],
+            "nesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning"
+            }
+          },
+          "notes": [
+            {
+              "value": "Metro i.p.v. trein",
+              "key": "SV",
+              "noteType": "ATTRIBUTE",
+              "isPresentationRequired": false
+            }
+          ],
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:02:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400061",
+              "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+              "lat": 52.339234,
+              "lng": 4.874338,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:09:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725708#TA#4#DA#81124#1S#1103329#1T#1002#LS#1103330#LT#1009#PU#784#RT#1#CA#MTS#ZE#925783#ZB#MT925783#PC#3#FR#1103329#FT#1002#TO#1103330#TT#1009#&train=925783&datetime=2024-11-08T10:02:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 7,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "7 min.",
+            "accessibilityValue": "7 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "1bb2c1fc_3",
+      "crowdForecast": "LOW",
+      "optimal": true,
+      "fareRoute": {
+        "routeId": "=JBkVKJiHdw==",
+        "origin": {
+          "varCode": 282,
+          "name": "Den Haag Centraal"
+        },
+        "destination": {
+          "varCode": 61,
+          "name": "Amsterdam Zuid"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2040,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1200,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1632,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 960,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1224,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 720,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4080,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2400,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3264,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1920,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2448,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1440,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 60100,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 35560,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 48230,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28370,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 578760,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 340440,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [],
+      "productFare": {
+        "priceInCents": 1200,
+        "priceInCentsExcludingSupplement": 1200,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": false,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/GVC/ASDZ/20241108/0915/1009?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A15%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A09%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D3730775865"
+      },
+      "realtime": true,
+      "routeId": "=JBkVKJiHdw==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A15%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A09%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D3730775865&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "10",
+          "accessibilityName": "Sprinter"
+        },
+        {
+          "name": "NS Metro i.p.v. trein",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "accessibilityName": "NS Metro i.p.v. trein"
+        }
+      ]
+    },
+    {
+      "idx": 1,
+      "uid": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:19:00+01:00|plannedArrivalTime=2024-11-08T10:17:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=4128126916",
+      "ctxRecon": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:19:00+01:00|plannedArrivalTime=2024-11-08T10:17:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=4128126916",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Den Haag Centraal@L=1100762@a=128@$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$202411080919$202411081008$SPR 4635$$1$$$$$$\u00a7W$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$202411081008$202411081010$$$1$$$$$$\u00a7T$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$A=1@O=Metrostation Amsterdam Zuid@L=1103330@a=128@$202411081010$202411081017$MT925785$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#3#HIN#0#ECK#150319|150319|150377|150377|0|0|325|150316|2|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 58,
+      "actualDurationInMinutes": 58,
+      "transfers": 1,
+      "status": "ALTERNATIVE_TRANSPORT",
+      "primaryMessage": {
+        "title": "Alternatief vervoer",
+        "nesProperties": {
+          "color": "text-warning-contrast",
+          "type": "warning",
+          "icon": "alert"
+        },
+        "type": "ALTERNATIVE_TRANSPORT"
+      },
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 4635",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Almere Oostvaarders",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#5823#TA#0#DA#81124#1S#1100762#1T#919#LS#1101245#LT#1104#PU#784#RT#1#CA#SPR#ZE#4635#ZB#SPR 4635#PC#3#FR#1100762#FT#919#TO#1101245#TT#1104#",
+          "origin": {
+            "name": "Den Haag Centraal",
+            "lng": 4.32499980926514,
+            "lat": 52.0802764892578,
+            "countryCode": "NL",
+            "uicCode": "8400282",
+            "stationCode": "GVC",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T09:19:00+0100",
+            "plannedTrack": "7",
+            "actualTrack": "7",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:08:00+0100",
+            "plannedTrack": "2",
+            "actualTrack": "2",
+            "exitSide": "LEFT",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "4635",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Almere Oostvaarders",
+                  "shortValue": "richting Almere Oostvaarders",
+                  "accessibilityValue": "richting Almere Oostvaarders",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "9 tussenstops",
+                  "shortValue": "9 tussenstops",
+                  "accessibilityValue": "9 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400282",
+              "name": "Den Haag Centraal",
+              "lat": 52.0802764892578,
+              "lng": 4.32499980926514,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T09:19:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "7",
+              "plannedDepartureTrack": "7",
+              "plannedArrivalTrack": "7",
+              "actualArrivalTrack": "7",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T09:23:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:23:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400278",
+              "name": "Den Haag Mariahoeve",
+              "lat": 52.0905570983887,
+              "lng": 4.36944437026978,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 2,
+              "plannedDepartureDateTime": "2024-11-08T09:26:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:26:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400659",
+              "name": "Voorschoten",
+              "lat": 52.1252784729004,
+              "lng": 4.43249988555908,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 3,
+              "plannedDepartureDateTime": "2024-11-08T09:31:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:31:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400188",
+              "name": "De Vink",
+              "lat": 52.1472206115723,
+              "lng": 4.4563889503479,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T09:34:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:34:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T09:39:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:38:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5a",
+              "plannedDepartureTrack": "5a",
+              "plannedArrivalTrack": "5a",
+              "actualArrivalTrack": "5a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400603",
+              "name": "Sassenheim",
+              "lat": 52.215278,
+              "lng": 4.517222,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 6,
+              "plannedDepartureDateTime": "2024-11-08T09:44:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:44:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400460",
+              "name": "Nieuw Vennep",
+              "lat": 52.2588882446289,
+              "lng": 4.64555549621582,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 7,
+              "plannedDepartureDateTime": "2024-11-08T09:51:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:51:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T09:56:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:55:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T10:02:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:00:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1-2",
+              "plannedDepartureTrack": "1-2",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedArrivalDateTime": "2024-11-08T10:08:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 6,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#5823#TA#0#DA#81124#1S#1100762#1T#919#LS#1101245#LT#1104#PU#784#RT#1#CA#SPR#ZE#4635#ZB#SPR 4635#PC#3#FR#1100762#FT#919#TO#1101245#TT#1104#&train=4635&datetime=2024-11-08T09:19:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 49,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "49 min.",
+            "accessibilityValue": "49 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "1",
+          "travelType": "WALK",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:08:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:10:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "type": "WALK",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "walk"
+            },
+            "notes": [
+              [
+                {
+                  "value": "Loop 13 meter",
+                  "shortValue": "Loop 13 meter",
+                  "accessibilityValue": "Loop 13 meter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:08:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:10:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "reachable": true,
+          "plannedDurationInMinutes": 2,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": true
+            }
+          },
+          "duration": {
+            "value": "2 min.",
+            "accessibilityValue": "2 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "2",
+          "name": "MTS 925785",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Zuid",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": true,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725702#TA#9#DA#81124#1S#1103329#1T#1010#LS#1103330#LT#1017#PU#784#RT#1#CA#MTS#ZE#925785#ZB#MT925785#PC#3#FR#1103329#FT#1010#TO#1103330#TT#1017#",
+          "origin": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:10:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+            "lng": 4.874338,
+            "lat": 52.339234,
+            "countryCode": "NL",
+            "uicCode": "8400061",
+            "stationCode": "ASDZ",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:17:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "925785",
+            "categoryCode": "MTS",
+            "shortCategoryName": "MTS",
+            "longCategoryName": "Metro i.p.v. trein",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Metro i.p.v. trein",
+            "nameNesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning",
+              "styles": {
+                "type": "TextStyles",
+                "strikethrough": false,
+                "bold": true
+              }
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "mts"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Metro i.p.v. trein",
+                  "shortValue": "NS Metro i.p.v. trein",
+                  "accessibilityValue": "NS Metro i.p.v. trein",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-warning-contrast",
+                    "type": "warning",
+                    "styles": {
+                      "type": "TextStyles",
+                      "strikethrough": false,
+                      "bold": true
+                    }
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amsterdam Zuid",
+                  "shortValue": "richting Amsterdam Zuid",
+                  "accessibilityValue": "richting Amsterdam Zuid",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "Geen tussenstops",
+                  "shortValue": "Geen tussenstops",
+                  "accessibilityValue": "Geen tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ],
+            "nesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning"
+            }
+          },
+          "notes": [
+            {
+              "value": "Metro i.p.v. trein",
+              "key": "SV",
+              "noteType": "ATTRIBUTE",
+              "isPresentationRequired": false
+            }
+          ],
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:10:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400061",
+              "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+              "lat": 52.339234,
+              "lng": 4.874338,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:17:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725702#TA#9#DA#81124#1S#1103329#1T#1010#LS#1103330#LT#1017#PU#784#RT#1#CA#MTS#ZE#925785#ZB#MT925785#PC#3#FR#1103329#FT#1010#TO#1103330#TT#1017#&train=925785&datetime=2024-11-08T10:10:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 7,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "7 min.",
+            "accessibilityValue": "7 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "5ba71361_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=JBkVKJiHdw==",
+        "origin": {
+          "varCode": 282,
+          "name": "Den Haag Centraal"
+        },
+        "destination": {
+          "varCode": 61,
+          "name": "Amsterdam Zuid"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2040,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1200,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1632,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 960,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1224,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 720,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4080,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2400,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3264,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1920,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2448,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1440,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 60100,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 35560,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 48230,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28370,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 578760,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 340440,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [],
+      "productFare": {
+        "priceInCents": 1200,
+        "priceInCentsExcludingSupplement": 1200,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": false,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/GVC/ASDZ/20241108/0919/1017?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A19%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A17%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D4128126916"
+      },
+      "realtime": true,
+      "routeId": "=JBkVKJiHdw==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A19%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A17%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D4128126916&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "7",
+          "accessibilityName": "Sprinter"
+        },
+        {
+          "name": "NS Metro i.p.v. trein",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "accessibilityName": "NS Metro i.p.v. trein"
+        }
+      ]
+    },
+    {
+      "idx": 2,
+      "uid": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:32:00+01:00|plannedArrivalTime=2024-11-08T10:28:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=523897350",
+      "ctxRecon": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:32:00+01:00|plannedArrivalTime=2024-11-08T10:28:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=523897350",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Den Haag Centraal@L=1100993@a=128@$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$202411080932$202411081018$SPR 5835$$1$$$$$$\u00a7W$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$202411081018$202411081020$$$1$$$$$$\u00a7T$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$A=1@O=Metrostation Amsterdam Zuid@L=1103330@a=128@$202411081021$202411081028$MT925797$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#3#HIN#0#ECK#150332|150332|150388|150388|0|0|325|150320|3|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 56,
+      "actualDurationInMinutes": 56,
+      "transfers": 1,
+      "status": "ALTERNATIVE_TRANSPORT",
+      "primaryMessage": {
+        "title": "Alternatief vervoer",
+        "nesProperties": {
+          "color": "text-warning-contrast",
+          "type": "warning",
+          "icon": "alert"
+        },
+        "type": "ALTERNATIVE_TRANSPORT"
+      },
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 5835",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amersfoort Vathorst",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#6950#TA#2#DA#81124#1S#1100993#1T#932#LS#1100984#LT#1136#PU#784#RT#1#CA#SPR#ZE#5835#ZB#SPR 5835#PC#3#FR#1100993#FT#932#TO#1100984#TT#1136#",
+          "origin": {
+            "name": "Den Haag Centraal",
+            "lng": 4.32499980926514,
+            "lat": 52.0802764892578,
+            "countryCode": "NL",
+            "uicCode": "8400282",
+            "stationCode": "GVC",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T09:32:00+0100",
+            "plannedTrack": "10",
+            "actualTrack": "10",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:18:00+0100",
+            "plannedTrack": "2",
+            "actualTrack": "2",
+            "exitSide": "LEFT",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "5835",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amersfoort Vathorst",
+                  "shortValue": "richting Amersfoort Vathorst",
+                  "accessibilityValue": "richting Amersfoort Vathorst",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "3 tussenstops",
+                  "shortValue": "3 tussenstops",
+                  "accessibilityValue": "3 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400282",
+              "name": "Den Haag Centraal",
+              "lat": 52.0802764892578,
+              "lng": 4.32499980926514,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T09:32:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "10",
+              "plannedDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T09:48:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:44:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4b",
+              "plannedDepartureTrack": "4b",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T10:05:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:00:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T10:11:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:09:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1-2",
+              "plannedDepartureTrack": "1-2",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedArrivalDateTime": "2024-11-08T10:18:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 6,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#6950#TA#2#DA#81124#1S#1100993#1T#932#LS#1100984#LT#1136#PU#784#RT#1#CA#SPR#ZE#5835#ZB#SPR 5835#PC#3#FR#1100993#FT#932#TO#1100984#TT#1136#&train=5835&datetime=2024-11-08T09:32:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 46,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "46 min.",
+            "accessibilityValue": "46 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "1",
+          "travelType": "WALK",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:18:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:20:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "type": "WALK",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "walk"
+            },
+            "notes": [
+              [
+                {
+                  "value": "Loop 13 meter",
+                  "shortValue": "Loop 13 meter",
+                  "accessibilityValue": "Loop 13 meter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:18:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:20:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "reachable": true,
+          "plannedDurationInMinutes": 2,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": true
+            }
+          },
+          "duration": {
+            "value": "2 min.",
+            "accessibilityValue": "2 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "2",
+          "name": "MTS 925797",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Zuid",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": true,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725724#TA#0#DA#81124#1S#1103329#1T#1021#LS#1103330#LT#1028#PU#784#RT#1#CA#MTS#ZE#925797#ZB#MT925797#PC#3#FR#1103329#FT#1021#TO#1103330#TT#1028#",
+          "origin": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:21:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+            "lng": 4.874338,
+            "lat": 52.339234,
+            "countryCode": "NL",
+            "uicCode": "8400061",
+            "stationCode": "ASDZ",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:28:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "925797",
+            "categoryCode": "MTS",
+            "shortCategoryName": "MTS",
+            "longCategoryName": "Metro i.p.v. trein",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Metro i.p.v. trein",
+            "nameNesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning",
+              "styles": {
+                "type": "TextStyles",
+                "strikethrough": false,
+                "bold": true
+              }
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "mts"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Metro i.p.v. trein",
+                  "shortValue": "NS Metro i.p.v. trein",
+                  "accessibilityValue": "NS Metro i.p.v. trein",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-warning-contrast",
+                    "type": "warning",
+                    "styles": {
+                      "type": "TextStyles",
+                      "strikethrough": false,
+                      "bold": true
+                    }
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amsterdam Zuid",
+                  "shortValue": "richting Amsterdam Zuid",
+                  "accessibilityValue": "richting Amsterdam Zuid",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "Geen tussenstops",
+                  "shortValue": "Geen tussenstops",
+                  "accessibilityValue": "Geen tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ],
+            "nesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning"
+            }
+          },
+          "notes": [
+            {
+              "value": "Metro i.p.v. trein",
+              "key": "SV",
+              "noteType": "ATTRIBUTE",
+              "isPresentationRequired": false
+            }
+          ],
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:21:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400061",
+              "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+              "lat": 52.339234,
+              "lng": 4.874338,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:28:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725724#TA#0#DA#81124#1S#1103329#1T#1021#LS#1103330#LT#1028#PU#784#RT#1#CA#MTS#ZE#925797#ZB#MT925797#PC#3#FR#1103329#FT#1021#TO#1103330#TT#1028#&train=925797&datetime=2024-11-08T10:21:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 7,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "7 min.",
+            "accessibilityValue": "7 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "034c2b81_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=JBkVKJiHdw==",
+        "origin": {
+          "varCode": 282,
+          "name": "Den Haag Centraal"
+        },
+        "destination": {
+          "varCode": 61,
+          "name": "Amsterdam Zuid"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2040,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1200,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1632,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 960,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1224,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 720,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4080,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2400,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3264,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1920,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2448,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1440,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 60100,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 35560,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 48230,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28370,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 578760,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 340440,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [],
+      "productFare": {
+        "priceInCents": 1200,
+        "priceInCentsExcludingSupplement": 1200,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": false,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/GVC/ASDZ/20241108/0932/1028?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A32%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A28%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D523897350"
+      },
+      "realtime": true,
+      "routeId": "=JBkVKJiHdw==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A32%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A28%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D523897350&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "10",
+          "accessibilityName": "Sprinter"
+        },
+        {
+          "name": "NS Metro i.p.v. trein",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "accessibilityName": "NS Metro i.p.v. trein"
+        }
+      ]
+    },
+    {
+      "idx": 3,
+      "uid": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:45:00+01:00|plannedArrivalTime=2024-11-08T10:42:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=1352518760",
+      "ctxRecon": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:45:00+01:00|plannedArrivalTime=2024-11-08T10:42:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=1352518760",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Den Haag Centraal@L=1100992@a=128@$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$202411080945$202411081030$SPR 3328$$1$$$$$$\u00a7W$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$202411081030$202411081032$$$1$$$$$$\u00a7T$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$A=1@O=Metrostation Amsterdam Zuid@L=1103330@a=128@$202411081035$202411081042$MT925131$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#3#HIN#0#ECK#150345|150345|150402|150402|0|0|325|150333|4|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 57,
+      "actualDurationInMinutes": 57,
+      "transfers": 1,
+      "status": "ALTERNATIVE_TRANSPORT",
+      "primaryMessage": {
+        "title": "Alternatief vervoer",
+        "nesProperties": {
+          "color": "text-warning-contrast",
+          "type": "warning",
+          "icon": "alert"
+        },
+        "type": "ALTERNATIVE_TRANSPORT"
+      },
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 3328",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Hoorn Kersenboogerd",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#3752#TA#3#DA#81124#1S#1100992#1T#945#LS#1101042#LT#1113#PU#784#RT#1#CA#SPR#ZE#3328#ZB#SPR 3328#PC#3#FR#1100992#FT#945#TO#1101042#TT#1113#",
+          "origin": {
+            "name": "Den Haag Centraal",
+            "lng": 4.32499980926514,
+            "lat": 52.0802764892578,
+            "countryCode": "NL",
+            "uicCode": "8400282",
+            "stationCode": "GVC",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T09:45:00+0100",
+            "plannedTrack": "9",
+            "actualTrack": "9",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:30:00+0100",
+            "plannedTrack": "2",
+            "actualTrack": "2",
+            "exitSide": "LEFT",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "3328",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Hoorn Kersenboogerd",
+                  "shortValue": "richting Hoorn Kersenboogerd",
+                  "accessibilityValue": "richting Hoorn Kersenboogerd",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "3 tussenstops",
+                  "shortValue": "3 tussenstops",
+                  "accessibilityValue": "3 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400282",
+              "name": "Den Haag Centraal",
+              "lat": 52.0802764892578,
+              "lng": 4.32499980926514,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T09:45:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "9",
+              "plannedDepartureTrack": "9",
+              "plannedArrivalTrack": "9",
+              "actualArrivalTrack": "9",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:02:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:57:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5b",
+              "plannedDepartureTrack": "5b",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T10:17:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:14:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T10:23:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:22:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1-2",
+              "plannedDepartureTrack": "1-2",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedArrivalDateTime": "2024-11-08T10:30:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "bicycleSpotCount": 4,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#3752#TA#3#DA#81124#1S#1100992#1T#945#LS#1101042#LT#1113#PU#784#RT#1#CA#SPR#ZE#3328#ZB#SPR 3328#PC#3#FR#1100992#FT#945#TO#1101042#TT#1113#&train=3328&datetime=2024-11-08T09:45:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 45,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "45 min.",
+            "accessibilityValue": "45 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "1",
+          "travelType": "WALK",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:30:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:32:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "type": "WALK",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "walk"
+            },
+            "notes": [
+              [
+                {
+                  "value": "Loop 13 meter",
+                  "shortValue": "Loop 13 meter",
+                  "accessibilityValue": "Loop 13 meter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:30:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:32:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "reachable": true,
+          "plannedDurationInMinutes": 2,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": true
+            }
+          },
+          "duration": {
+            "value": "2 min.",
+            "accessibilityValue": "2 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "2",
+          "name": "MTS 925131",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Bijlmer ArenA",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": true,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725634#TA#4#DA#81124#1S#1103329#1T#1035#LS#1103328#LT#1054#PU#784#RT#1#CA#MTS#ZE#925131#ZB#MT925131#PC#3#FR#1103329#FT#1035#TO#1103328#TT#1054#",
+          "origin": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:35:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+            "lng": 4.874338,
+            "lat": 52.339234,
+            "countryCode": "NL",
+            "uicCode": "8400061",
+            "stationCode": "ASDZ",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:42:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "925131",
+            "categoryCode": "MTS",
+            "shortCategoryName": "MTS",
+            "longCategoryName": "Metro i.p.v. trein",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Metro i.p.v. trein",
+            "nameNesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning",
+              "styles": {
+                "type": "TextStyles",
+                "strikethrough": false,
+                "bold": true
+              }
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "mts"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Metro i.p.v. trein",
+                  "shortValue": "NS Metro i.p.v. trein",
+                  "accessibilityValue": "NS Metro i.p.v. trein",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-warning-contrast",
+                    "type": "warning",
+                    "styles": {
+                      "type": "TextStyles",
+                      "strikethrough": false,
+                      "bold": true
+                    }
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amsterdam Bijlmer ArenA",
+                  "shortValue": "richting Amsterdam Bijlmer ArenA",
+                  "accessibilityValue": "richting Amsterdam Bijlmer ArenA",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "Geen tussenstops",
+                  "shortValue": "Geen tussenstops",
+                  "accessibilityValue": "Geen tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ],
+            "nesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning"
+            }
+          },
+          "notes": [
+            {
+              "value": "Metro i.p.v. trein",
+              "key": "SV",
+              "noteType": "ATTRIBUTE",
+              "isPresentationRequired": false
+            }
+          ],
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:35:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400061",
+              "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+              "lat": 52.339234,
+              "lng": 4.874338,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:42:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725634#TA#4#DA#81124#1S#1103329#1T#1035#LS#1103328#LT#1054#PU#784#RT#1#CA#MTS#ZE#925131#ZB#MT925131#PC#3#FR#1103329#FT#1035#TO#1103328#TT#1054#&train=925131&datetime=2024-11-08T10:35:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 7,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "7 min.",
+            "accessibilityValue": "7 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "7f962eb4_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=JBkVKJiHdw==",
+        "origin": {
+          "varCode": 282,
+          "name": "Den Haag Centraal"
+        },
+        "destination": {
+          "varCode": 61,
+          "name": "Amsterdam Zuid"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2040,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1200,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1632,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 960,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1224,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 720,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4080,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2400,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3264,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1920,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2448,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1440,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 60100,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 35560,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 48230,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28370,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 578760,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 340440,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [],
+      "productFare": {
+        "priceInCents": 1200,
+        "priceInCentsExcludingSupplement": 1200,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": false,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/GVC/ASDZ/20241108/0945/1042?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A45%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A42%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D1352518760"
+      },
+      "realtime": true,
+      "routeId": "=JBkVKJiHdw==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A45%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A42%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D1352518760&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "9",
+          "accessibilityName": "Sprinter"
+        },
+        {
+          "name": "NS Metro i.p.v. trein",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "accessibilityName": "NS Metro i.p.v. trein"
+        }
+      ]
+    },
+    {
+      "idx": 4,
+      "uid": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:49:00+01:00|plannedArrivalTime=2024-11-08T10:47:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=3064791235",
+      "ctxRecon": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T09:49:00+01:00|plannedArrivalTime=2024-11-08T10:47:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=3064791235",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Den Haag Centraal@L=1100762@a=128@$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$202411080949$202411081038$SPR 4637$$1$$$$$$\u00a7W$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$202411081038$202411081040$$$1$$$$$$\u00a7T$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$A=1@O=Metrostation Amsterdam Zuid@L=1103330@a=128@$202411081040$202411081047$MT925802$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#3#HIN#0#ECK#150349|150349|150407|150407|0|0|325|150346|5|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 58,
+      "actualDurationInMinutes": 58,
+      "transfers": 1,
+      "status": "ALTERNATIVE_TRANSPORT",
+      "primaryMessage": {
+        "title": "Alternatief vervoer",
+        "nesProperties": {
+          "color": "text-warning-contrast",
+          "type": "warning",
+          "icon": "alert"
+        },
+        "type": "ALTERNATIVE_TRANSPORT"
+      },
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 4637",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Almere Oostvaarders",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#734072#TA#0#DA#81124#1S#1100762#1T#949#LS#1101245#LT#1134#PU#784#RT#1#CA#SPR#ZE#4637#ZB#SPR 4637#PC#3#FR#1100762#FT#949#TO#1101245#TT#1134#",
+          "origin": {
+            "name": "Den Haag Centraal",
+            "lng": 4.32499980926514,
+            "lat": 52.0802764892578,
+            "countryCode": "NL",
+            "uicCode": "8400282",
+            "stationCode": "GVC",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T09:49:00+0100",
+            "plannedTrack": "7",
+            "actualTrack": "7",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:38:00+0100",
+            "plannedTrack": "2",
+            "actualTrack": "2",
+            "exitSide": "LEFT",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "4637",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Almere Oostvaarders",
+                  "shortValue": "richting Almere Oostvaarders",
+                  "accessibilityValue": "richting Almere Oostvaarders",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "9 tussenstops",
+                  "shortValue": "9 tussenstops",
+                  "accessibilityValue": "9 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400282",
+              "name": "Den Haag Centraal",
+              "lat": 52.0802764892578,
+              "lng": 4.32499980926514,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T09:49:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "7",
+              "plannedDepartureTrack": "7",
+              "plannedArrivalTrack": "7",
+              "actualArrivalTrack": "7",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400380",
+              "name": "Den Haag Laan v NOI",
+              "lat": 52.0786094665527,
+              "lng": 4.34277772903442,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedDepartureDateTime": "2024-11-08T09:52:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:52:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400278",
+              "name": "Den Haag Mariahoeve",
+              "lat": 52.0905570983887,
+              "lng": 4.36944437026978,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 2,
+              "plannedDepartureDateTime": "2024-11-08T09:56:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T09:56:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400659",
+              "name": "Voorschoten",
+              "lat": 52.1252784729004,
+              "lng": 4.43249988555908,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 3,
+              "plannedDepartureDateTime": "2024-11-08T10:01:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:01:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400188",
+              "name": "De Vink",
+              "lat": 52.1472206115723,
+              "lng": 4.4563889503479,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 4,
+              "plannedDepartureDateTime": "2024-11-08T10:04:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:04:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:09:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:08:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "5a",
+              "plannedDepartureTrack": "5a",
+              "plannedArrivalTrack": "5a",
+              "actualArrivalTrack": "5a",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400603",
+              "name": "Sassenheim",
+              "lat": 52.215278,
+              "lng": 4.517222,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 6,
+              "plannedDepartureDateTime": "2024-11-08T10:14:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:14:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400460",
+              "name": "Nieuw Vennep",
+              "lat": 52.2588882446289,
+              "lng": 4.64555549621582,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 7,
+              "plannedDepartureDateTime": "2024-11-08T10:21:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:21:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T10:26:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:25:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T10:32:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:30:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1-2",
+              "plannedDepartureTrack": "1-2",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedArrivalDateTime": "2024-11-08T10:38:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#734072#TA#0#DA#81124#1S#1100762#1T#949#LS#1101245#LT#1134#PU#784#RT#1#CA#SPR#ZE#4637#ZB#SPR 4637#PC#3#FR#1100762#FT#949#TO#1101245#TT#1134#&train=4637&datetime=2024-11-08T09:49:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 49,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "49 min.",
+            "accessibilityValue": "49 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "1",
+          "travelType": "WALK",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:38:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:40:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "type": "WALK",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "walk"
+            },
+            "notes": [
+              [
+                {
+                  "value": "Loop 13 meter",
+                  "shortValue": "Loop 13 meter",
+                  "accessibilityValue": "Loop 13 meter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:38:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:40:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "reachable": true,
+          "plannedDurationInMinutes": 2,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": true
+            }
+          },
+          "duration": {
+            "value": "2 min.",
+            "accessibilityValue": "2 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "2",
+          "name": "MTS 925802",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Zuid",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": true,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725726#TA#0#DA#81124#1S#1103329#1T#1040#LS#1103330#LT#1047#PU#784#RT#1#CA#MTS#ZE#925802#ZB#MT925802#PC#3#FR#1103329#FT#1040#TO#1103330#TT#1047#",
+          "origin": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:40:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+            "lng": 4.874338,
+            "lat": 52.339234,
+            "countryCode": "NL",
+            "uicCode": "8400061",
+            "stationCode": "ASDZ",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:47:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "925802",
+            "categoryCode": "MTS",
+            "shortCategoryName": "MTS",
+            "longCategoryName": "Metro i.p.v. trein",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Metro i.p.v. trein",
+            "nameNesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning",
+              "styles": {
+                "type": "TextStyles",
+                "strikethrough": false,
+                "bold": true
+              }
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "mts"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Metro i.p.v. trein",
+                  "shortValue": "NS Metro i.p.v. trein",
+                  "accessibilityValue": "NS Metro i.p.v. trein",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-warning-contrast",
+                    "type": "warning",
+                    "styles": {
+                      "type": "TextStyles",
+                      "strikethrough": false,
+                      "bold": true
+                    }
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amsterdam Zuid",
+                  "shortValue": "richting Amsterdam Zuid",
+                  "accessibilityValue": "richting Amsterdam Zuid",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "Geen tussenstops",
+                  "shortValue": "Geen tussenstops",
+                  "accessibilityValue": "Geen tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ],
+            "nesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning"
+            }
+          },
+          "notes": [
+            {
+              "value": "Metro i.p.v. trein",
+              "key": "SV",
+              "noteType": "ATTRIBUTE",
+              "isPresentationRequired": false
+            }
+          ],
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:40:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400061",
+              "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+              "lat": 52.339234,
+              "lng": 4.874338,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:47:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725726#TA#0#DA#81124#1S#1103329#1T#1040#LS#1103330#LT#1047#PU#784#RT#1#CA#MTS#ZE#925802#ZB#MT925802#PC#3#FR#1103329#FT#1040#TO#1103330#TT#1047#&train=925802&datetime=2024-11-08T10:40:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 7,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "7 min.",
+            "accessibilityValue": "7 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "ca82d674_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=JBkVKJiHdw==",
+        "origin": {
+          "varCode": 282,
+          "name": "Den Haag Centraal"
+        },
+        "destination": {
+          "varCode": 61,
+          "name": "Amsterdam Zuid"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2040,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1200,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1632,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 960,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1224,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 720,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4080,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2400,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3264,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1920,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2448,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1440,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 60100,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 35560,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 48230,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28370,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 578760,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 340440,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [],
+      "productFare": {
+        "priceInCents": 1200,
+        "priceInCentsExcludingSupplement": 1200,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": false,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/GVC/ASDZ/20241108/0949/1047?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A49%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A47%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D3064791235"
+      },
+      "realtime": true,
+      "routeId": "=JBkVKJiHdw==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T09%3A49%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T10%3A47%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D3064791235&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "7",
+          "accessibilityName": "Sprinter"
+        },
+        {
+          "name": "NS Metro i.p.v. trein",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "accessibilityName": "NS Metro i.p.v. trein"
+        }
+      ]
+    },
+    {
+      "idx": 5,
+      "uid": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T10:02:00+01:00|plannedArrivalTime=2024-11-08T11:02:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=846693556",
+      "ctxRecon": "arnu|fromStation=8400282|toStation=8400061|plannedFromTime=2024-11-08T10:02:00+01:00|plannedArrivalTime=2024-11-08T11:02:00+01:00|excludeHighSpeedTrains=false|searchForAccessibleTrip=false|localTrainsOnly=false|disabledTransportModalities=BUS,FERRY,TRAM,METRO|travelAssistance=false|tripSummaryHash=846693556",
+      "sourceCtxRecon": "\u00b6HKI\u00b6T$A=1@O=Den Haag Centraal@L=1100992@a=128@$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$202411081002$202411081048$SPR 5837$$3$$$$$$\u00a7W$A=1@O=Amsterdam Lelylaan@L=1100743@a=128@$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$202411081048$202411081050$$$1$$$$$$\u00a7T$A=1@O=Metrostation Amsterdam Lelylaan@L=1103329@a=128@$A=1@O=Metrostation Amsterdam Zuid@L=1103330@a=128@$202411081055$202411081102$MT925998$$1$$$$$$\u00b6KC\u00b6#VE#2#CF#100#CA#0#CM#0#SICT#0#AM#16481#AM2#0#RT#31#\u00b6KCC\u00b6#VE#0#ERG#3#HIN#0#ECK#150362|150362|150422|150422|0|0|325|150350|6|0|10|0|0|-2147483648#\u00b6KRCC\u00b6#VE#1#MRTF#",
+      "plannedDurationInMinutes": 60,
+      "actualDurationInMinutes": 60,
+      "transfers": 1,
+      "status": "ALTERNATIVE_TRANSPORT",
+      "primaryMessage": {
+        "title": "Alternatief vervoer",
+        "nesProperties": {
+          "color": "text-warning-contrast",
+          "type": "warning",
+          "icon": "alert"
+        },
+        "type": "ALTERNATIVE_TRANSPORT"
+      },
+      "messages": [],
+      "legs": [
+        {
+          "idx": "0",
+          "name": "SPR 5837",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amersfoort Vathorst",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#859201#TA#0#DA#81124#1S#1100992#1T#1002#LS#1100984#LT#1206#PU#784#RT#3#CA#SPR#ZE#5837#ZB#SPR 5837#PC#3#FR#1100992#FT#1002#TO#1100984#TT#1206#",
+          "origin": {
+            "name": "Den Haag Centraal",
+            "lng": 4.32499980926514,
+            "lat": 52.0802764892578,
+            "countryCode": "NL",
+            "uicCode": "8400282",
+            "stationCode": "GVC",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:02:00+0100",
+            "plannedTrack": "9",
+            "actualTrack": "9",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:48:00+0100",
+            "plannedTrack": "2",
+            "actualTrack": "2",
+            "exitSide": "LEFT",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "5837",
+            "categoryCode": "SPR",
+            "shortCategoryName": "SPR",
+            "longCategoryName": "Sprinter",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Sprinter",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "train"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Sprinter",
+                  "shortValue": "NS Sprinter",
+                  "accessibilityValue": "NS Sprinter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amersfoort Vathorst",
+                  "shortValue": "richting Amersfoort Vathorst",
+                  "accessibilityValue": "richting Amersfoort Vathorst",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "3 tussenstops",
+                  "shortValue": "3 tussenstops",
+                  "accessibilityValue": "3 tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400282",
+              "name": "Den Haag Centraal",
+              "lat": 52.0802764892578,
+              "lng": 4.32499980926514,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:02:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "actualDepartureTrack": "9",
+              "plannedDepartureTrack": "9",
+              "plannedArrivalTrack": "9",
+              "actualArrivalTrack": "9",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400390",
+              "name": "Leiden Centraal",
+              "lat": 52.1661109924316,
+              "lng": 4.48166656494141,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 5,
+              "plannedDepartureDateTime": "2024-11-08T10:18:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:14:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4b",
+              "plannedDepartureTrack": "4b",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400332",
+              "name": "Hoofddorp",
+              "lat": 52.2933349609375,
+              "lng": 4.70055532455444,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 8,
+              "plannedDepartureDateTime": "2024-11-08T10:35:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:30:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "4",
+              "plannedDepartureTrack": "4",
+              "plannedArrivalTrack": "4",
+              "actualArrivalTrack": "4",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400561",
+              "name": "Schiphol Airport",
+              "lat": 52.3094444274902,
+              "lng": 4.76194429397583,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 9,
+              "plannedDepartureDateTime": "2024-11-08T10:41:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "plannedArrivalDateTime": "2024-11-08T10:39:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "1-2",
+              "plannedDepartureTrack": "1-2",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 10,
+              "plannedArrivalDateTime": "2024-11-08T10:48:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "actualDepartureTrack": "2",
+              "plannedDepartureTrack": "2",
+              "plannedArrivalTrack": "2",
+              "actualArrivalTrack": "2",
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "LOW",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#859201#TA#0#DA#81124#1S#1100992#1T#1002#LS#1100984#LT#1206#PU#784#RT#3#CA#SPR#ZE#5837#ZB#SPR 5837#PC#3#FR#1100992#FT#1002#TO#1100984#TT#1206#&train=5837&datetime=2024-11-08T10:02:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 46,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "46 min.",
+            "accessibilityValue": "46 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "1",
+          "travelType": "WALK",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "name": "Amsterdam Lelylaan",
+            "lng": 4.83388900756836,
+            "lat": 52.3577766418457,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:48:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:50:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "type": "WALK",
+            "nameNesProperties": {
+              "color": "text-body"
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "walk"
+            },
+            "notes": [
+              [
+                {
+                  "value": "Loop 13 meter",
+                  "shortValue": "Loop 13 meter",
+                  "accessibilityValue": "Loop 13 meter",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ]
+          },
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan",
+              "lat": 52.3577766418457,
+              "lng": 4.83388900756836,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:48:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T10:50:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "reachable": true,
+          "plannedDurationInMinutes": 2,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": true
+            }
+          },
+          "duration": {
+            "value": "2 min.",
+            "accessibilityValue": "2 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        },
+        {
+          "idx": "2",
+          "name": "MTS 925998",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Zuid",
+          "partCancelled": false,
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": true,
+          "journeyDetailRef": "HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725739#TA#0#DA#81124#1S#1103329#1T#1055#LS#1103330#LT#1102#PU#784#RT#1#CA#MTS#ZE#925998#ZB#MT925998#PC#3#FR#1103329#FT#1055#TO#1103330#TT#1102#",
+          "origin": {
+            "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+            "lng": 4.83412,
+            "lat": 52.357949,
+            "countryCode": "NL",
+            "uicCode": "8400079",
+            "stationCode": "ASDL",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T10:55:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "destination": {
+            "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+            "lng": 4.874338,
+            "lat": 52.339234,
+            "countryCode": "NL",
+            "uicCode": "8400061",
+            "stationCode": "ASDZ",
+            "type": "STATION",
+            "plannedTimeZoneOffset": 60,
+            "plannedDateTime": "2024-11-08T11:02:00+0100",
+            "checkinStatus": "NOTHING",
+            "notes": []
+          },
+          "product": {
+            "productType": "Product",
+            "number": "925998",
+            "categoryCode": "MTS",
+            "shortCategoryName": "MTS",
+            "longCategoryName": "Metro i.p.v. trein",
+            "operatorCode": "ns",
+            "operatorName": "NS",
+            "operatorAdministrativeCode": 100,
+            "type": "TRAIN",
+            "displayName": "NS Metro i.p.v. trein",
+            "nameNesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning",
+              "styles": {
+                "type": "TextStyles",
+                "strikethrough": false,
+                "bold": true
+              }
+            },
+            "iconNesProperties": {
+              "color": "text-body",
+              "icon": "mts"
+            },
+            "notes": [
+              [
+                {
+                  "value": "NS Metro i.p.v. trein",
+                  "shortValue": "NS Metro i.p.v. trein",
+                  "accessibilityValue": "NS Metro i.p.v. trein",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-warning-contrast",
+                    "type": "warning",
+                    "styles": {
+                      "type": "TextStyles",
+                      "strikethrough": false,
+                      "bold": true
+                    }
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "richting Amsterdam Zuid",
+                  "shortValue": "richting Amsterdam Zuid",
+                  "accessibilityValue": "richting Amsterdam Zuid",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ],
+              [
+                {
+                  "value": "Geen tussenstops",
+                  "shortValue": "Geen tussenstops",
+                  "accessibilityValue": "Geen tussenstops",
+                  "noteType": "ATTRIBUTE",
+                  "isPresentationRequired": true,
+                  "nesProperties": {
+                    "color": "text-body"
+                  }
+                }
+              ]
+            ],
+            "nesProperties": {
+              "color": "text-warning-contrast",
+              "type": "warning"
+            }
+          },
+          "notes": [
+            {
+              "value": "Metro i.p.v. trein",
+              "key": "SV",
+              "noteType": "ATTRIBUTE",
+              "isPresentationRequired": false
+            }
+          ],
+          "stops": [
+            {
+              "uicCode": "8400079",
+              "name": "Amsterdam Lelylaan, Metrostation Amsterdam Lelylaan",
+              "lat": 52.357949,
+              "lng": 4.83412,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 0,
+              "plannedDepartureDateTime": "2024-11-08T10:55:00+0100",
+              "plannedDepartureTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            },
+            {
+              "uicCode": "8400061",
+              "name": "Amsterdam Zuid, Metrostation Amsterdam Zuid",
+              "lat": 52.339234,
+              "lng": 4.874338,
+              "countryCode": "NL",
+              "notes": [],
+              "routeIdx": 1,
+              "plannedArrivalDateTime": "2024-11-08T11:02:00+0100",
+              "plannedArrivalTimeZoneOffset": 60,
+              "cancelled": false,
+              "borderStop": false,
+              "passing": false
+            }
+          ],
+          "crowdForecast": "UNKNOWN",
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "/api/v2/journey?id=HARP_MM-2|#VN#1#ST#1730897075#PI#0#ZI#725739#TA#0#DA#81124#1S#1103329#1T#1055#LS#1103330#LT#1102#PU#784#RT#1#CA#MTS#ZE#925998#ZB#MT925998#PC#3#FR#1103329#FT#1055#TO#1103330#TT#1102#&train=925998&datetime=2024-11-08T10:55:00+01:00"
+              }
+            }
+          ],
+          "reachable": true,
+          "plannedDurationInMinutes": 7,
+          "nesProperties": {
+            "color": "text-info",
+            "scope": "LEG_LINE",
+            "styles": {
+              "type": "LineStyles",
+              "dashed": false
+            }
+          },
+          "duration": {
+            "value": "7 min.",
+            "accessibilityValue": "7 minuten",
+            "nesProperties": {
+              "color": "text-body"
+            }
+          }
+        }
+      ],
+      "checksum": "3fd36149_3",
+      "crowdForecast": "LOW",
+      "optimal": false,
+      "fareRoute": {
+        "routeId": "=JBkVKJiHdw==",
+        "origin": {
+          "varCode": 282,
+          "name": "Den Haag Centraal"
+        },
+        "destination": {
+          "varCode": 61,
+          "name": "Amsterdam Zuid"
+        }
+      },
+      "fares": [
+        {
+          "priceInCents": 2040,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1200,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1632,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 960,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1224,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 720,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 4080,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2400,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 3264,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 1920,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2448,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1440,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 60100,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 35560,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 48230,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28370,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 578760,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 340440,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "fareLegs": [],
+      "productFare": {
+        "priceInCents": 1200,
+        "priceInCentsExcludingSupplement": 1200,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": false,
+        "isTotalPriceUnknown": false
+      },
+      "nsiLink": {
+        "url": "https://www.nsinternational.com/nl/treintickets-v3/#/search/GVC/ASDZ/20241108/1002/1102?stationType=domestic&cookieConsent=false",
+        "showInternationalBanner": false
+      },
+      "type": "NS",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T10%3A02%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A02%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D846693556"
+      },
+      "realtime": true,
+      "routeId": "=JBkVKJiHdw==",
+      "registerJourney": {
+        "url": "https://treinwijzer.ns.nl/idp/login?ctxRecon=arnu%7CfromStation%3D8400282%7CtoStation%3D8400061%7CplannedFromTime%3D2024-11-08T10%3A02%3A00%2B01%3A00%7CplannedArrivalTime%3D2024-11-08T11%3A02%3A00%2B01%3A00%7CexcludeHighSpeedTrains%3Dfalse%7CsearchForAccessibleTrip%3Dfalse%7ClocalTrainsOnly%3Dfalse%7CdisabledTransportModalities%3DBUS%2CFERRY%2CTRAM%2CMETRO%7CtravelAssistance%3Dfalse%7CtripSummaryHash%3D846693556&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "searchUrl": "https://treinwijzer.ns.nl/idp/login?search=true&originUicCode=8400282&destinationUicCode=8400061&dateTime=2024-11-08T09%3A13%3A00%2B01%3A00&searchForArrival=false&excludeHighSpeedTrains=false&localTrainsOnly=false&searchForAccessibleTrip=false&lang=nl&travelAssistance=false",
+        "status": "REGISTRATION_POSSIBLE",
+        "bicycleReservationRequired": false
+      },
+      "modalityListItems": [
+        {
+          "name": "Sprinter",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "actualTrack": "9",
+          "accessibilityName": "Sprinter"
+        },
+        {
+          "name": "NS Metro i.p.v. trein",
+          "nameNesProperties": {
+            "color": "text-subtle",
+            "styles": {
+              "type": "TextStyles",
+              "strikethrough": false,
+              "bold": false
+            }
+          },
+          "iconNesProperties": {
+            "color": "text-body",
+            "icon": "train"
+          },
+          "accessibilityName": "NS Metro i.p.v. trein"
+        }
+      ]
+    }
+  ],
+  "scrollRequestBackwardContext": "3|OB|MT\u00b514\u00b5150315\u00b5150315\u00b5150369\u00b5150369\u00b50\u00b50\u00b5325\u00b5150303\u00b51\u00b50\u00b510\u00b50\u00b50\u00b5-2147483648\u00b51\u00b52|PDH\u00b52b800e127c9355155a8494776ceda11f|RD\u00b58112024|RT\u00b590300|US\u00b50|RS\u00b5INIT",
+  "scrollRequestForwardContext": "3|OF|MT\u00b514\u00b5150362\u00b5150362\u00b5150422\u00b5150422\u00b50\u00b50\u00b5325\u00b5150350\u00b56\u00b50\u00b510\u00b50\u00b50\u00b5-2147483648\u00b51\u00b52|PDH\u00b52b800e127c9355155a8494776ceda11f|RD\u00b58112024|RT\u00b590300|US\u00b50|RS\u00b5INIT"
+}
