@@ -63,13 +63,15 @@ class Trip(super):
 
         o = self.leg.get("origin", {})
         self.origin = o["stationCode"].lower()
-        self.departure_track = o["plannedTrack"]
-        self.departure_time = dateutil.parser.isoparse(o["plannedDateTime"])
+        self.departure_track = o.get("actualTrack", o.get("plannedTrack", None))
+        departure_time = o.get("actualDateTime", o.get("plannedDateTime", None))
+        self.departure_time = dateutil.parser.isoparse(departure_time)
 
         d = self.leg.get("destination", {})
         self.destination = d["stationCode"].lower()
-        self.arrival_time = dateutil.parser.isoparse(d["plannedDateTime"])
-        self.arrival_track = d["plannedTrack"]
+        self.arrival_track = d.get("actualTrack", d.get("plannedTrack", None))
+        arrival_time = d.get("actualDateTime", d.get("plannedDateTime", None))
+        self.arrival_time = dateutil.parser.isoparse(arrival_time)
 
         self.leave_by = self._leave_by()
         self.arrive_by = self._arrive_by()
