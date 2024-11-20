@@ -90,8 +90,7 @@ async def trains_where_delta(where: str, delta: int):
     )
 
     # update label
-    now_utc = datetime.now(timezone.utc)
-    now = now_utc.astimezone().strftime("%H:%M")
+    now = date_time.strftime("%H:%M")
     label.bind_text_from(
         table,
         "rows",
@@ -104,5 +103,6 @@ async def trains_where_delta(where: str, delta: int):
         ui.link("➖", f"/trains/{where}/{delta - 1}")
         ui.link("➕", f"/trains/{where}/{delta + 1}")
 
-
+ui.timer(300, lambda: ns.get_trips(where_to="home", no_cache=True))
+ui.timer(300, lambda: ns.get_trips(where_to="work", no_cache=True))
 ui.run(host="0.0.0.0", favicon="🚂", title="Stationator", show=False)

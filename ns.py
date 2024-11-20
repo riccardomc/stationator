@@ -7,7 +7,7 @@ import dateutil.parser
 import dateutil.tz
 import requests
 from datetime import datetime, timedelta
-
+from functools import lru_cache
 
 class Station(super):
 
@@ -122,10 +122,14 @@ class Trip(super):
         return json.dumps(vars(self), default=str, sort_keys=True, indent=2)
 
 
-def get_amsterdam_time(delta=0):
-    return datetime.now(dateutil.tz.gettz("Europe/Amsterdam")) + timedelta(hours=delta)
+def get_amsterdam_time(delta=0, round_to_hour=True):
+    dt = datetime.now(dateutil.tz.gettz("Europe/Amsterdam")) + timedelta(hours=delta)
+    if round_to_hour:
+        dt = dt.replace(minute=0, second=0, microsecond=0)
+    return dt
 
 
+@lru_cache
 def fetch_trips(origin="laa", destination="asdz", date_time=None):
     url = "https://gateway.apiportal.ns.nl/reisinformatie-api/api/v3/trips"
     api_key = os.getenv("NS_API_KEY")
@@ -139,21 +143,26 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
         "dateTime": date_time.strftime("%Y-%m-%dT%H:%M"),
     }
 
+    print(f"fetching trips {params}")
+
     headers = {
-        "Cache-Control": "no-cache",
         "Ocp-Apim-Subscription-Key": api_key,
     }
 
     try:
         r = requests.get(url, params=params, headers=headers)
         data = r.json()
+        #with open(f"./sample-trips-{origin}-{destination}-{date_time}.json", "w") as f:
+        #    json.dump(data, f, default=str, indent=2)
     except Exception as e:
         print(e)
 
     return data
 
 
-def get_trips(where_to="home", date_time=None):
+def get_trips(where_to="home", date_time=None, no_cache=False):
+    if no_cache:
+        fetch_trips.cache_clear()
 
     if where_to == "work":
         stations = [("laa", "asdz"), ("gvc", "asdz"),
