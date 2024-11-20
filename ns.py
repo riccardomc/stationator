@@ -15,7 +15,7 @@ class Station(super):
         self.full_name = station_data["full_name"]
         self.short_name = station_data["short_name"]
         d = datetime.strptime(station_data["biking_time"], "%H:%M")
-        d = timedelta(hours=d.hour, minutes=d.minute, seconds=d.second)
+        d = timedelta(hours=d.hour, minutes=d.minute)
         self.biking_time = d
 
 
@@ -75,7 +75,9 @@ class Trip(super):
 
         self.leave_by = self._leave_by()
         self.arrive_by = self._arrive_by()
-        # self.biking_time = self._biking_time()
+        self.biking_time = self._biking_time()
+        self.train_time = self._train_time()
+        self.travel_time = self.biking_time + self.train_time
 
     def _leg(self):
         legs = self.trip_data.get("legs", [])
@@ -107,6 +109,13 @@ class Trip(super):
 
         return None
 
+    def _train_time(self):
+        departure_delta = timedelta(
+            hours=self.departure_time.hour,
+            minutes=self.departure_time.minute
+        )
+        return self.arrival_time - departure_delta
+
     def __str__(self):
         return f"""{
             self.departure_time.strftime("%H:%M")}, {
@@ -116,7 +125,11 @@ class Trip(super):
             self.transfers}, {
             self.status}, {
             self.leave_by.strftime("%H:%M")}, {
-            self.arrive_by.strftime("%H:%M")}"""
+            self.arrive_by.strftime("%H:%M")}, {
+            self.biking_time.strftime("%H:%M")}, {
+            self.train_time.strftime("%H:%M")}, {
+            self.travel_time.strftime("%H:%M")},
+        """
 
     def json(self):
         return json.dumps(vars(self), default=str, sort_keys=True, indent=2)
@@ -143,8 +156,6 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
         "dateTime": date_time.strftime("%Y-%m-%dT%H:%M"),
     }
 
-    print(f"fetching trips {params}")
-
     headers = {
         "Ocp-Apim-Subscription-Key": api_key,
     }
@@ -152,8 +163,6 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
     try:
         r = requests.get(url, params=params, headers=headers)
         data = r.json()
-        #with open(f"./sample-trips-{origin}-{destination}-{date_time}.json", "w") as f:
-        #    json.dump(data, f, default=str, indent=2)
     except Exception as e:
         print(e)
 

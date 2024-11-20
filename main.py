@@ -13,9 +13,12 @@ columns_order = [
     "status",
     "leave_by",
     "arrive_by",
+    "biking_time",
+    "train_time",
+    "travel_time",
 ]
 
-labels = ["⏰", "⏰", "🛫", "🛤️", "🛬", "☠️", "🚴", "🚴"]
+labels = ["⏰", "⏰", "🛫", "🛤️", "🛬", "☠️", "🚴", "🚴", "🚴", "💺", "↔"]
 
 columns = [{"name": c, "label": l, "field": c}
            for c, l in zip(columns_order, labels)]
