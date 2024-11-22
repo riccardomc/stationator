@@ -169,10 +169,8 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
     return data
 
 
-def get_trips(where_to="home", date_time=None, no_cache=False):
-    if no_cache:
-        fetch_trips.cache_clear()
-
+def get_trips(where_to="home", date_time=None):
+    print(f"{get_amsterdam_time(round_to_hour=False)}: get_trips({where_to}, {date_time})")
     if where_to == "work":
         stations = [("laa", "asdz"), ("gvc", "asdz"),
                     ("laa", "asd"), ("gvc", "asd")]
@@ -191,4 +189,5 @@ def get_trips(where_to="home", date_time=None, no_cache=False):
 
     trips = [Trip(t) for t in trips_data if Trip(t).transfers == 0]
     trips = sorted(trips, key=lambda t: t.departure_time)
+    print(f"{get_amsterdam_time(round_to_hour=False)}: get_trips({where_to}, {date_time}), {len(trips)}")
     return trips

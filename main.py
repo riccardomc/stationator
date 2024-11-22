@@ -106,6 +106,11 @@ async def trains_where_delta(where: str, delta: int):
         ui.link("➖", f"/trains/{where}/{delta - 1}")
         ui.link("➕", f"/trains/{where}/{delta + 1}")
 
-ui.timer(300, lambda: ns.get_trips(where_to="home", no_cache=True))
-ui.timer(300, lambda: ns.get_trips(where_to="work", no_cache=True))
+def get_trips():
+    date_time = ns.get_amsterdam_time()
+    ns.fetch_trips.cache_clear()
+    ns.get_trips(where_to="home", date_time=date_time)
+    ns.get_trips(where_to="work", date_time=date_time)
+
+ui.timer(300, get_trips)
 ui.run(host="0.0.0.0", favicon="🚂", title="Stationator", show=False)
