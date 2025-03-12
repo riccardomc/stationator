@@ -24,14 +24,14 @@ stations = {
         {
             "full_name": "Amsterdam Centraal",
             "short_name": "asd",
-            "biking_time": "00:10",
+            "biking_time": "00:21",
         }
     ),
     "asdz": Station(
         {
             "full_name": "Amsterdam Zuid",
             "short_name": "asdz",
-            "biking_time": "00:14",
+            "biking_time": "00:06",
         }
     ),
     "gvc": Station(
