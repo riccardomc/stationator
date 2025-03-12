@@ -166,9 +166,11 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
 
     try:
         r = requests.get(url, params=params, headers=headers)
+        if r.status_code != 200:
+            raise Exception(r.status_code, r.reason, r.json())
         data = r.json()
     except Exception as e:
-        print(e)
+        print("Exception while fetching trips:", e)
 
     return data
 
