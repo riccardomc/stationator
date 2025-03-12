@@ -179,14 +179,12 @@ def get_trips(where_to="home", date_time=None):
     print(f"{get_amsterdam_time(round_to_hour=False)
              }: get_trips({where_to}, {date_time})")
     if where_to == "work":
-        stations = [("laa", "asdz"), ("gvc", "asdz"),
-                    ("laa", "asd"), ("gvc", "asd")]
+        stations = [("laa", "asdz"), ("gvc", "asdz")]
         trips_data = itertools.chain.from_iterable(
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
     elif where_to == "home":
-        stations = [("asdz", "laa"), ("asdz", "gvc"),
-                    ("asd", "laa"), ("asd", "gvc")]
+        stations = [("asdz", "laa"), ("asdz", "gvc")]
         trips_data = itertools.chain.from_iterable(
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
