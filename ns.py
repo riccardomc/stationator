@@ -176,8 +176,8 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
 
 
 def get_trips(where_to="home", date_time=None):
-    print(f"{get_amsterdam_time(round_to_hour=False)
-             }: get_trips({where_to}, {date_time})")
+    ams_time = get_amsterdam_time(round_to_hour=False)
+    print(f"{ams_time}: get_trips({where_to}, {date_time})")
     if where_to == "work":
         stations = [("laa", "asdz"), ("gvc", "asdz")]
         trips_data = itertools.chain.from_iterable(
@@ -194,6 +194,6 @@ def get_trips(where_to="home", date_time=None):
 
     trips = [Trip(t) for t in trips_data if Trip(t).transfers == 0]
     trips = sorted(trips, key=lambda t: t.departure_time)
-    print(f"{get_amsterdam_time(round_to_hour=False)
-             }: get_trips({where_to}, {date_time}), {len(trips)}")
+    ams_time = get_amsterdam_time(round_to_hour=False)
+    print(f"{ams_time}: get_trips({where_to}, {date_time}), {len(trips)}")
     return trips
