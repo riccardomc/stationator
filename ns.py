@@ -9,6 +9,7 @@ import requests
 from datetime import datetime, timedelta
 from functools import lru_cache
 
+
 class Station(super):
 
     def __init__(self, station_data):
@@ -63,8 +64,10 @@ class Trip(super):
 
         o = self.leg.get("origin", {})
         self.origin = o["stationCode"].lower()
-        self.departure_track = o.get("actualTrack", o.get("plannedTrack", None))
-        departure_time = o.get("actualDateTime", o.get("plannedDateTime", None))
+        self.departure_track = o.get(
+            "actualTrack", o.get("plannedTrack", None))
+        departure_time = o.get(
+            "actualDateTime", o.get("plannedDateTime", None))
         self.departure_time = dateutil.parser.isoparse(departure_time)
 
         d = self.leg.get("destination", {})
@@ -136,7 +139,8 @@ class Trip(super):
 
 
 def get_amsterdam_time(delta=0, round_to_hour=True):
-    dt = datetime.now(dateutil.tz.gettz("Europe/Amsterdam")) + timedelta(hours=delta)
+    dt = datetime.now(dateutil.tz.gettz("Europe/Amsterdam")
+                      ) + timedelta(hours=delta)
     if round_to_hour:
         dt = dt.replace(minute=0, second=0, microsecond=0)
     return dt
@@ -170,7 +174,8 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
 
 
 def get_trips(where_to="home", date_time=None):
-    print(f"{get_amsterdam_time(round_to_hour=False)}: get_trips({where_to}, {date_time})")
+    print(f"{get_amsterdam_time(round_to_hour=False)
+             }: get_trips({where_to}, {date_time})")
     if where_to == "work":
         stations = [("laa", "asdz"), ("gvc", "asdz"),
                     ("laa", "asd"), ("gvc", "asd")]
@@ -189,5 +194,6 @@ def get_trips(where_to="home", date_time=None):
 
     trips = [Trip(t) for t in trips_data if Trip(t).transfers == 0]
     trips = sorted(trips, key=lambda t: t.departure_time)
-    print(f"{get_amsterdam_time(round_to_hour=False)}: get_trips({where_to}, {date_time}), {len(trips)}")
+    print(f"{get_amsterdam_time(round_to_hour=False)
+             }: get_trips({where_to}, {date_time}), {len(trips)}")
     return trips
