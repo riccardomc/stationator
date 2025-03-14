@@ -138,11 +138,15 @@ class Trip(super):
         return json.dumps(vars(self), default=str, sort_keys=True, indent=2)
 
 
-def get_amsterdam_time(delta=0, round_to_hour=True):
-    dt = datetime.now(dateutil.tz.gettz("Europe/Amsterdam")
-                      ) + timedelta(hours=delta)
+def get_amsterdam_time(hour=0, round_to_hour=True):
+    dt = datetime.now(dateutil.tz.gettz("Europe/Amsterdam"))
+
+    if hour >= 0 and hour < 24:
+        dt = dt.replace(hour=hour)
+
     if round_to_hour:
         dt = dt.replace(minute=0, second=0, microsecond=0)
+
     return dt
 
 
@@ -164,6 +168,7 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
         "Ocp-Apim-Subscription-Key": api_key,
     }
 
+    data = {}
     try:
         r = requests.get(url, params=params, headers=headers)
         if r.status_code != 200:

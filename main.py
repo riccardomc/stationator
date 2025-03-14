@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from datetime import datetime
+from datetime import datetime, timedelta
 from nicegui import ui, run
 import ns
 
@@ -31,18 +31,18 @@ def root():
 
 @ui.page("/trains")
 def trains_index():
-    ui.link("🏠", "trains/home/0")
-    ui.link("💼", "trains/work/0")
+    ui.link("🏠", "trains/home")
+    ui.link("💼", "trains/work")
 
 
 @ui.page("/trains/{where}")
 async def trains_where(where: str):
-    await trains_where_delta(where, 0)
+    hour = int(ns.get_amsterdam_time().hour)
+    ui.navigate.to(f"/trains/{where}/{hour}")
 
 
-@ui.page("/trains/{where}/{delta}")
-async def trains_where_delta(where: str, delta: int):
-
+@ui.page("/trains/{where}/{hour}")
+async def trains_where_hour(where: str, hour: int):
     # already display page once client websocket is connected
     await ui.context.client.connected()
     with ui.row():
@@ -50,9 +50,7 @@ async def trains_where_delta(where: str, delta: int):
         spinner = ui.spinner()
 
     # set time
-    if delta is None or delta == "" or type(delta) is not int:
-        delta = 0
-    date_time = ns.get_amsterdam_time(delta)
+    date_time = ns.get_amsterdam_time(hour)
     print(f"going to fetch {date_time}")
 
     # get trips async
@@ -103,15 +101,23 @@ async def trains_where_delta(where: str, delta: int):
     # add back link
     with ui.row():
         ui.link("🫵", "/trains")
-        ui.link("➖", f"/trains/{where}/{delta - 1}")
-        ui.link("➕", f"/trains/{where}/{delta + 1}")
+        ui.link("➖", f"/trains/{where}/{hour - 1}")
+        ui.link("➕", f"/trains/{where}/{hour + 1}")
 
 
 def get_trips():
     date_time = ns.get_amsterdam_time()
     ns.fetch_trips.cache_clear()
+
+    #cache trips home now, and +1 -1 hour
+    ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=-1))
     ns.get_trips(where_to="home", date_time=date_time)
+    ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=1))
+
+    #cache trips work now, and +1 -1 hour
+    ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=-1))
     ns.get_trips(where_to="work", date_time=date_time)
+    ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=1))
 
 
 ui.timer(300, get_trips)
