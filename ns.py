@@ -138,7 +138,7 @@ class Trip(super):
         return json.dumps(vars(self), default=str, sort_keys=True, indent=2)
 
 
-def get_amsterdam_time(hour=0, round_to_hour=True):
+def get_amsterdam_time(hour=-1, round_to_hour=True):
     dt = datetime.now(dateutil.tz.gettz("Europe/Amsterdam"))
 
     if hour >= 0 and hour < 24:

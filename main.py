@@ -106,7 +106,8 @@ async def trains_where_hour(where: str, hour: int):
 
 
 def get_trips():
-    date_time = ns.get_amsterdam_time()
+    hour = int(ns.get_amsterdam_time().hour)
+    date_time = ns.get_amsterdam_time(hour)
     ns.fetch_trips.cache_clear()
 
     #cache trips home now, and +1 -1 hour
