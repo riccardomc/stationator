@@ -69,6 +69,7 @@ class Trip(super):
         departure_time = o.get(
             "actualDateTime", o.get("plannedDateTime", None))
         self.departure_time = dateutil.parser.isoparse(departure_time)
+        self.direction = self.leg.get("direction", None)
 
         d = self.leg.get("destination", {})
         self.destination = d["stationCode"].lower()
