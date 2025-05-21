@@ -125,12 +125,10 @@ def get_trips():
     ns.fetch_trips.cache_clear()
 
     #cache trips home now, and +1 -1 hour
-    ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=-1))
     ns.get_trips(where_to="home", date_time=date_time)
     ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=1))
 
     #cache trips work now, and +1 -1 hour
-    ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=-1))
     ns.get_trips(where_to="work", date_time=date_time)
     ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=1))
 
