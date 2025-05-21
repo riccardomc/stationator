@@ -1,25 +1,15 @@
 import unittest
 from datetime import datetime, timedelta
 import json
-import os
+import gzip
 from unittest.mock import patch
 from ns import get_trips, get_amsterdam_time, Trip
 
 class TestGetTrips(unittest.TestCase):
     def setUp(self):
-        # Load sample data for different routes
-        self.sample_data = {}
-        sample_dir = "sample-trips"
-        for filename in os.listdir(sample_dir):
-            if filename.endswith(".json") and os.path.getsize(os.path.join(sample_dir, filename)) > 0:
-                with open(os.path.join(sample_dir, filename), "r") as f:
-                    # Extract origin and destination from filename
-                    # Format: sample-trips-{origin}-{destination}-{datetime}.json
-                    parts = filename.replace(".json", "").split("-")
-                    origin = parts[2]
-                    destination = parts[3]
-                    key = f"{origin}-{destination}"
-                    self.sample_data[key] = json.load(f)
+        # Load sample data from gzipped file
+        with gzip.open("sample-trips.json.gz", "rt", encoding="utf-8") as f:
+            self.sample_data = json.load(f)
 
     @patch('ns.fetch_trips')
     def test_get_trips_home(self, mock_fetch_trips):
