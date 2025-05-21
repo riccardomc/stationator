@@ -6,19 +6,33 @@ import ns
 
 columns_order = [
     "departure_time",
+    "direction",
     "arrival_time",
     "origin",
     "departure_track",
     "destination",
     "status",
+    "travel_time",
     "leave_by",
     "arrive_by",
-    "biking_time",
     "train_time",
-    "travel_time",
+    "biking_time",
 ]
 
-labels = ["⏰", "⏰", "🛫", "🛤️", "🛬", "☠️", "🚴", "🚴", "🚴", "💺", "↔"]
+labels = [
+    "🕗",
+    "🏁",
+    "🕓",
+    "🛫",
+    "🚉",
+    "🛬",
+    "☠️",
+    "⏱️",
+    "🚀",
+    "😰",
+    "💺",
+    "🚴",
+]
 
 columns = [{"name": c, "label": l, "field": c}
            for c, l in zip(columns_order, labels)]
@@ -60,7 +74,7 @@ async def trains_where_hour(where: str, hour: int):
     # serialize trips, format datetimes
     rows = [
         {
-            k: v.strftime("%H:%M") if isinstance(v, datetime) else str(v)
+            k: v.strftime("%H:%M") if isinstance(v, datetime) else (datetime.min + v).strftime("%H:%M") if isinstance(v, timedelta) else str(v)
             for k, v in vars(t).items()
         }
         for t in trips
@@ -111,12 +125,10 @@ def get_trips():
     ns.fetch_trips.cache_clear()
 
     #cache trips home now, and +1 -1 hour
-    ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=-1))
     ns.get_trips(where_to="home", date_time=date_time)
     ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=1))
 
     #cache trips work now, and +1 -1 hour
-    ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=-1))
     ns.get_trips(where_to="work", date_time=date_time)
     ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=1))
 
