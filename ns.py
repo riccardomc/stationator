@@ -93,13 +93,13 @@ class Trip(super):
 
     def _leave_by(self):
         origin_station = stations.get(self.origin, None)
-        if origin_station:
-            return self.departure_time - origin_station.biking_time
+        biking_time = origin_station.biking_time if origin_station else timedelta(0)
+        return self.departure_time - biking_time
 
     def _arrive_by(self):
         destination_station = stations.get(self.destination, None)
-        if destination_station:
-            return self.arrival_time + destination_station.biking_time
+        biking_time = destination_station.biking_time if destination_station else timedelta(0)
+        return self.arrival_time + biking_time
 
     def _biking_time(self):
         origin_station = stations.get(self.origin, None)
@@ -111,7 +111,7 @@ class Trip(super):
         elif destination_station:
             return destination_station.biking_time
 
-        return None
+        return timedelta(0)
 
     def _train_time(self):
         departure_delta = timedelta(
