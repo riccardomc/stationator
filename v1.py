@@ -2,6 +2,15 @@
 from datetime import datetime, timedelta
 from nicegui import ui, run
 import ns
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
 
 
 columns_order = [
@@ -40,6 +49,7 @@ columns = [{"name": c, "label": l, "field": c}
 
 @ui.page("/v1/trains")
 def v1_trains_index():
+    logger.info("Rendering v1 trains index page")
     ui.link("🏠", "trains/home")
     ui.link("💼", "trains/work")
     ui.link("⬅️ back", "/trains")
@@ -47,12 +57,14 @@ def v1_trains_index():
 
 @ui.page("/v1/trains/{where}")
 async def v1_trains_where(where: str):
+    logger.info(f"Navigating to v1 trains for destination: {where}")
     hour = int(ns.get_amsterdam_time().hour)
     ui.navigate.to(f"/v1/trains/{where}/{hour}")
 
 
 @ui.page("/v1/trains/{where}/{hour}")
 async def v1_trains_where_hour(where: str, hour: int):
+    logger.info(f"Rendering v1 trains page for {where} at hour {hour}")
     # already display page once client websocket is connected
     await ui.context.client.connected()
     with ui.row():
@@ -61,11 +73,12 @@ async def v1_trains_where_hour(where: str, hour: int):
 
     # set time
     date_time = ns.get_amsterdam_time(hour)
-    print(f"going to fetch {date_time}")
+    logger.info(f"Fetching trips for {date_time}")
 
     # get trips async
     trips = await run.io_bound(ns.get_trips, where, date_time)
     spinner.visible = False
+    logger.info(f"Retrieved {len(trips)} trips")
 
     # serialize trips, format datetimes
     rows = [
