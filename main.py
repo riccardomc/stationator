@@ -3,6 +3,10 @@ from datetime import timedelta
 from nicegui import ui
 import ns
 
+# import is necessary to make pages work
+import v1
+import v2
+
 
 @ui.page("/")
 def root():
