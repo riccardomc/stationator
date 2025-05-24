@@ -6,8 +6,17 @@ import itertools
 import dateutil.parser
 import dateutil.tz
 import requests
+import logging
 from datetime import datetime, timedelta
 from functools import lru_cache
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
 
 
 class Station(super):
@@ -169,21 +178,25 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
         "Ocp-Apim-Subscription-Key": api_key,
     }
 
+    logger.info(f"Fetching trips from {origin} to {destination} at {date_time}")
     data = {}
     try:
         r = requests.get(url, params=params, headers=headers)
         if r.status_code != 200:
+            logger.error(f"Failed to fetch trips: {r.status_code} {r.reason}")
             raise Exception(r.status_code, r.reason, r.json())
         data = r.json()
+        logger.info(f"Successfully fetched {len(data.get('trips', []))} trips")
     except Exception as e:
-        print("Exception while fetching trips:", e)
+        logger.error(f"Exception while fetching trips: {e}")
 
     return data
 
 
 def get_trips(where_to="home", date_time=None):
     ams_time = get_amsterdam_time(round_to_hour=False)
-    print(f"{ams_time}: get_trips({where_to}, {date_time})")
+    logger.info(f"Getting trips to {where_to}")
+    
     if where_to == "work":
         stations = [("laa", "asdz"), ("gvc", "asdz")]
         trips_data = itertools.chain.from_iterable(
@@ -195,11 +208,11 @@ def get_trips(where_to="home", date_time=None):
             ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
         )
     else:
+        logger.info("Using sample trip data")
         with open("./sample_trip.json", "r") as f:
             trips_data = json.load(f)["trips"]
 
     trips = [Trip(t) for t in trips_data if Trip(t).transfers == 0]
     trips = sorted(trips, key=lambda t: t.departure_time)
-    ams_time = get_amsterdam_time(round_to_hour=False)
-    print(f"{ams_time}: get_trips({where_to}, {date_time}), {len(trips)}")
+    logger.info(f"Found {len(trips)} direct trips to {where_to}")
     return trips
