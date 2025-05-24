@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-from datetime import datetime, timedelta
-from nicegui import ui, run
+from datetime import timedelta
+from nicegui import ui
 import ns
-import v1
-import v2
 
 
 @ui.page("/")

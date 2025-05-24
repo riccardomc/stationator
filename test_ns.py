@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import unittest
-from datetime import datetime, timedelta
+from datetime import timedelta
 import json
 import gzip
 from unittest.mock import patch
-from ns import get_trips, get_amsterdam_time, Trip
+from ns import get_trips, get_amsterdam_time
 
 class TestGetTrips(unittest.TestCase):
     def setUp(self):
