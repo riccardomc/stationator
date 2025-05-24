@@ -112,4 +112,4 @@ async def v1_trains_where_hour(where: str, hour: int):
     with ui.row():
         ui.link("🫵", "/v1/trains")
         ui.link("➖", f"/v1/trains/{where}/{hour - 1}")
-        ui.link("➕", f"/v1/trains/{where}/{hour + 1}") 
+        ui.link("➕", f"/v1/trains/{where}/{hour + 1}")

@@ -40,7 +40,6 @@ and then enable the service 🤷‍♂️
 ```
 systemctl enable stationator.service
 ```
-
 ## Ok...
 
 This README is mostly for myself, when, 6 months from now I will not remember anything of what I've done when I was sick and bored and built this thing. ❤️

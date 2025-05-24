@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import unittest
 from datetime import datetime, timedelta
 import json
@@ -18,7 +19,7 @@ class TestGetTrips(unittest.TestCase):
             key = f"{origin}-{destination}"
             return self.sample_data.get(key, {"trips": []})
         mock_fetch_trips.side_effect = mock_fetch
-        
+
         # Test getting trips to home
         trips = get_trips(where_to="home")
         self.assertIsInstance(trips, list)
@@ -34,7 +35,7 @@ class TestGetTrips(unittest.TestCase):
             key = f"{origin}-{destination}"
             return self.sample_data.get(key, {"trips": []})
         mock_fetch_trips.side_effect = mock_fetch
-        
+
         # Test getting trips to work
         trips = get_trips(where_to="work")
         self.assertIsInstance(trips, list)
@@ -50,7 +51,7 @@ class TestGetTrips(unittest.TestCase):
             key = f"{origin}-{destination}"
             return self.sample_data.get(key, {"trips": []})
         mock_fetch_trips.side_effect = mock_fetch
-        
+
         # Test getting trips with a specific datetime
         test_time = get_amsterdam_time() + timedelta(hours=1)
         trips = get_trips(where_to="home", date_time=test_time)
@@ -76,11 +77,11 @@ class TestGetTrips(unittest.TestCase):
             key = f"{origin}-{destination}"
             return self.sample_data.get(key, {"trips": []})
         mock_fetch_trips.side_effect = mock_fetch
-        
+
         # Test that trips are sorted by departure time
         trips = get_trips(where_to="home")
         for i in range(len(trips) - 1):
             self.assertLessEqual(trips[i].departure_time, trips[i + 1].departure_time)
 
 if __name__ == '__main__':
-    unittest.main() 
+    unittest.main()
