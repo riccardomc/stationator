@@ -93,10 +93,10 @@ async def v2_trains_where_hour(where: str, hour: int):
         date_time = ns.get_amsterdam_time(hour)
         logger.info(f"Fetching trips for {date_time}")
 
-    # get trips async
-    trips = await ns.get_trips(where, date_time)
-    spinner.visible = False
-    logger.info(f"Retrieved {len(trips)} trips")
+        # get trips async
+        trips = await ns.get_trips(where, date_time)
+        spinner.visible = False
+        logger.info(f"Retrieved {len(trips)} trips")
 
         # Update label
         now = date_time.strftime("%H:%M")
@@ -159,7 +159,7 @@ async def v2_trains_where_hour(where: str, hour: int):
                                             ui.label(f"{format_timedelta(trip.arrival_time)} 🕓").classes('text-base sm:text-lg font-bold')
                                             ui.label(f"{trip.destination.upper()} 🛬").classes('text-sm sm:text-base')
                                             if trip.arrival_track:
-                                                ui.label(f"{trip.arrival_track} ��").classes('text-xs text-gray-600')
+                                                ui.label(f"{trip.arrival_track} 🚉").classes('text-xs text-gray-600')
 
                                     # Travel time for mobile
                                     with ui.row().classes('sm:hidden justify-center items-center gap-1 mt-1 pt-1 border-t'):
