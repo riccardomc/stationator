@@ -2,6 +2,7 @@
 from datetime import timedelta
 from nicegui import ui
 import ns
+import asyncio
 
 # import is necessary to make pages work
 import v1
@@ -32,19 +33,19 @@ async def trains_where_hour(where: str, hour: int):
     ui.navigate.to(f"/v2/trains/{where}/{hour}")
 
 
-def get_trips():
+async def get_trips():
     hour = int(ns.get_amsterdam_time().hour)
     date_time = ns.get_amsterdam_time(hour)
     ns.fetch_trips.cache_clear()
 
     #cache trips home now, and +1 -1 hour
-    ns.get_trips(where_to="home", date_time=date_time)
-    ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=1))
+    await ns.get_trips(where_to="home", date_time=date_time)
+    await ns.get_trips(where_to="home", date_time=date_time + timedelta(hours=1))
 
     #cache trips work now, and +1 -1 hour
-    ns.get_trips(where_to="work", date_time=date_time)
-    ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=1))
+    await ns.get_trips(where_to="work", date_time=date_time)
+    await ns.get_trips(where_to="work", date_time=date_time + timedelta(hours=1))
 
 
-ui.timer(300, get_trips)
+ui.timer(300, lambda: asyncio.create_task(get_trips()))
 ui.run(host="0.0.0.0", favicon="🚂", title="Stationator", show=False)

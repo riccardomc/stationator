@@ -54,7 +54,7 @@ async def v2_trains_where_hour(where: str, hour: int):
     logger.info(f"Fetching trips for {date_time}")
 
     # get trips async
-    trips = await run.io_bound(ns.get_trips, where, date_time)
+    trips = await ns.get_trips(where, date_time)
     spinner.visible = False
     logger.info(f"Retrieved {len(trips)} trips")
 

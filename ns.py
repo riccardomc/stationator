@@ -5,10 +5,12 @@ import json
 import itertools
 import dateutil.parser
 import dateutil.tz
-import requests
+import aiohttp
+import asyncio
 import logging
 from datetime import datetime, timedelta
-from functools import lru_cache
+from functools import lru_cache, wraps
+from typing import Any, Callable, TypeVar
 
 # Configure logging
 logging.basicConfig(
@@ -17,6 +19,29 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger(__name__)
+
+T = TypeVar('T')
+
+def async_lru_cache(maxsize: int = 128, typed: bool = False):
+    cache = {}
+    
+    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
+        @wraps(func)
+        async def wrapper(*args: Any, **kwargs: Any) -> Any:
+            key = str(args) + str(sorted(kwargs.items()))
+            if key not in cache:
+                cache[key] = await func(*args, **kwargs)
+                if len(cache) > maxsize:
+                    # Remove oldest item
+                    cache.pop(next(iter(cache)))
+            return cache[key]
+
+        def cache_clear():
+            cache.clear()
+
+        wrapper.cache_clear = cache_clear
+        return wrapper
+    return decorator
 
 
 class Station(super):
@@ -160,8 +185,8 @@ def get_amsterdam_time(hour=-1, round_to_hour=True):
     return dt
 
 
-@lru_cache
-def fetch_trips(origin="laa", destination="asdz", date_time=None):
+@async_lru_cache(maxsize=128)
+async def fetch_trips(origin="laa", destination="asdz", date_time=None):
     url = "https://gateway.apiportal.ns.nl/reisinformatie-api/api/v3/trips"
     api_key = os.getenv("NS_API_KEY")
 
@@ -181,32 +206,33 @@ def fetch_trips(origin="laa", destination="asdz", date_time=None):
     logger.info(f"Fetching trips from {origin} to {destination} at {date_time}")
     data = {}
     try:
-        r = requests.get(url, params=params, headers=headers)
-        if r.status_code != 200:
-            logger.error(f"Failed to fetch trips: {r.status_code} {r.reason}")
-            raise Exception(r.status_code, r.reason, r.json())
-        data = r.json()
-        logger.info(f"Successfully fetched {len(data.get('trips', []))} trips")
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, headers=headers) as response:
+                if response.status != 200:
+                    logger.error(f"Failed to fetch trips: {response.status} {response.reason}")
+                    raise Exception(response.status, response.reason, await response.json())
+                data = await response.json()
+                logger.info(f"Successfully fetched {len(data.get('trips', []))} trips")
     except Exception as e:
         logger.error(f"Exception while fetching trips: {e}")
 
     return data
 
 
-def get_trips(where_to="home", date_time=None):
+async def get_trips(where_to="home", date_time=None):
     ams_time = get_amsterdam_time(round_to_hour=False)
     logger.info(f"Getting trips to {where_to}")
     
     if where_to == "work":
         stations = [("laa", "asdz"), ("gvc", "asdz")]
-        trips_data = itertools.chain.from_iterable(
-            ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
-        )
+        tasks = [fetch_trips(o, d, date_time) for o, d in stations]
+        results = await asyncio.gather(*tasks)
+        trips_data = itertools.chain.from_iterable([r.get("trips", []) for r in results])
     elif where_to == "home":
         stations = [("asdz", "laa"), ("asdz", "gvc")]
-        trips_data = itertools.chain.from_iterable(
-            ([fetch_trips(o, d, date_time)["trips"] for o, d in stations])
-        )
+        tasks = [fetch_trips(o, d, date_time) for o, d in stations]
+        results = await asyncio.gather(*tasks)
+        trips_data = itertools.chain.from_iterable([r.get("trips", []) for r in results])
     else:
         logger.info("Using sample trip data")
         with open("./sample_trip.json", "r") as f:
