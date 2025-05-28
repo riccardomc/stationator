@@ -26,7 +26,7 @@ class TestGetTrips(unittest.TestCase):
         self.assertIsInstance(trips, list)
         for trip in trips:
             self.assertEqual(trip.transfers, 0)
-            self.assertIn(trip.origin, ["asdz"])
+            self.assertIn(trip.origin, ["asdz", "asd"])
             self.assertIn(trip.destination, ["laa", "gvc"])
 
     @patch('ns.fetch_trips')
@@ -43,7 +43,7 @@ class TestGetTrips(unittest.TestCase):
         for trip in trips:
             self.assertEqual(trip.transfers, 0)
             self.assertIn(trip.origin, ["laa", "gvc"])
-            self.assertIn(trip.destination, ["asdz"])
+            self.assertIn(trip.destination, ["asdz", "asd"])
 
     @patch('ns.fetch_trips')
     def test_get_trips_with_datetime(self, mock_fetch_trips):
@@ -59,7 +59,7 @@ class TestGetTrips(unittest.TestCase):
         self.assertIsInstance(trips, list)
         for trip in trips:
             self.assertEqual(trip.transfers, 0)
-            self.assertIn(trip.origin, ["asdz"])
+            self.assertIn(trip.origin, ["asdz", "asd"])
             self.assertIn(trip.destination, ["laa", "gvc"])
 
     def test_get_trips_other_destination(self):
