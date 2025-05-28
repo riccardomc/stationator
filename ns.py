@@ -222,14 +222,14 @@ async def fetch_trips(origin="laa", destination="asdz", date_time=None):
 async def get_trips(where_to="home", date_time=None):
     ams_time = get_amsterdam_time(round_to_hour=False)
     logger.info(f"Getting trips to {where_to}")
-    
+
     if where_to == "work":
-        stations = [("laa", "asdz"), ("gvc", "asdz")]
+        stations = [("laa", "asdz"), ("gvc", "asdz"), ("laa", "asd"), ("gvc", "asd")]
         tasks = [fetch_trips(o, d, date_time) for o, d in stations]
         results = await asyncio.gather(*tasks)
         trips_data = itertools.chain.from_iterable([r.get("trips", []) for r in results])
     elif where_to == "home":
-        stations = [("asdz", "laa"), ("asdz", "gvc")]
+        stations = [("asdz", "laa"), ("asdz", "gvc"), ("asd", "laa"), ("asd", "gvc")]
         tasks = [fetch_trips(o, d, date_time) for o, d in stations]
         results = await asyncio.gather(*tasks)
         trips_data = itertools.chain.from_iterable([r.get("trips", []) for r in results])

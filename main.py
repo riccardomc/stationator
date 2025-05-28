@@ -3,6 +3,7 @@ from datetime import timedelta
 from nicegui import ui
 import ns
 import asyncio
+import storage
 
 # import is necessary to make pages work
 import v1
@@ -11,11 +12,13 @@ import v2
 
 @ui.page("/")
 def root():
+    storage.init_storage()
     ui.navigate.to("/trains")
 
 
 @ui.page("/trains")
 def trains_index():
+    storage.init_storage()
     ui.link("🏠", "trains/home")
     ui.link("💼", "trains/work")
     ui.link("📊 v1", "/v1/trains")
@@ -23,12 +26,14 @@ def trains_index():
 
 @ui.page("/trains/{where}")
 async def trains_where(where: str):
+    storage.init_storage()
     hour = int(ns.get_amsterdam_time().hour)
     ui.navigate.to(f"/trains/{where}/{hour}")
 
 
 @ui.page("/trains/{where}/{hour}")
 async def trains_where_hour(where: str, hour: int):
+    storage.init_storage()
     # Redirect to v2 implementation
     ui.navigate.to(f"/v2/trains/{where}/{hour}")
 
@@ -48,4 +53,4 @@ async def get_trips():
 
 
 ui.timer(300, lambda: asyncio.create_task(get_trips()))
-ui.run(host="0.0.0.0", favicon="🚂", title="Stationator", show=False)
+ui.run(host="0.0.0.0", favicon="🚂", title="Stationator", show=False, storage_secret="stationator_secret_key")
