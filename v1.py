@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 from datetime import datetime, timedelta
-from nicegui import ui, run
+from nicegui import ui, run, app
 import ns
 import logging
+import storage
 
 # Configure logging
 logging.basicConfig(
@@ -67,7 +68,12 @@ async def v1_trains_where_hour(where: str, hour: int):
     logger.info(f"Rendering v1 trains page for {where} at hour {hour}")
     # already display page once client websocket is connected
     await ui.context.client.connected()
-    with ui.row():
+
+    # Initialize storage
+    storage.init_storage()
+
+    # Add label and spinner
+    with ui.row().classes('w-full justify-left gap-2 mb-4'):
         label = ui.label(f"Fetching trips to {where}...")
         spinner = ui.spinner()
 
@@ -76,9 +82,13 @@ async def v1_trains_where_hour(where: str, hour: int):
     logger.info(f"Fetching trips for {date_time}")
 
     # get trips async
-    trips = await run.io_bound(ns.get_trips, where, date_time)
+    trips = await ns.get_trips(where, date_time)
     spinner.visible = False
     logger.info(f"Retrieved {len(trips)} trips")
+
+    # Hide spinner and update label
+    spinner.visible = False
+    label.set_text(f"Found {len(trips)} trips at {date_time.strftime('%H:%M')}")
 
     # serialize trips, format datetimes
     rows = [
@@ -113,13 +123,32 @@ async def v1_trains_where_hour(where: str, hour: int):
         """,
     )
 
-    # update label
+    # Update label and filter rows
     now = date_time.strftime("%H:%M")
-    label.bind_text_from(
-        table,
-        "rows",
-        lambda rows: f"Found {len(rows)} trips at {now}",
-    )
+    def update_label():
+        filtered_rows = [
+            row for row in rows
+            if app.storage.user['station_selection'][row['origin']] and app.storage.user['station_selection'][row['destination']]
+        ]
+        table.rows = filtered_rows
+        label.set_text(f"Found {len(filtered_rows)} trips at {now}")
+
+    # Add station selection checkboxes
+    with ui.row().classes('w-full justify-left gap-4 mb-4'):
+        for station_code, station in ns.stations.items():
+            checkbox = ui.checkbox(
+                station_code.upper(),
+                value=app.storage.user['station_selection'][station_code]
+            ).classes('text-base')
+            checkbox.bind_value(app.storage.user['station_selection'], station_code)
+            checkbox.on('change', update_label)
+
+        # Add refresh link
+        refresh_link = ui.link('🔄', '#').classes('text-base no-underline')
+        refresh_link.on('click', lambda: ui.navigate.to(f"/v1/trains/{where}/{hour}"))
+
+    # Initial label update
+    update_label()
 
     # add back link
     with ui.row():
