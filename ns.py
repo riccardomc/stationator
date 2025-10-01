@@ -197,26 +197,32 @@ async def fetch_trips(origin="laa", destination="asdz", date_time=None):
         "fromStation": origin,
         "toStation": destination,
         "dateTime": date_time.strftime("%Y-%m-%dT%H:%M"),
+        "excludeHighSpeedTrains": "True",
+        "excludeTrainsWithReservationRequired": "True",
     }
 
     headers = {
         "Ocp-Apim-Subscription-Key": api_key,
     }
 
+    trips = []
+    pages = 2
     logger.info(f"Fetching trips from {origin} to {destination} at {date_time}")
-    data = {}
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url, params=params, headers=headers) as response:
-                if response.status != 200:
-                    logger.error(f"Failed to fetch trips: {response.status} {response.reason}")
-                    raise Exception(response.status, response.reason, await response.json())
-                data = await response.json()
-                logger.info(f"Successfully fetched {len(data.get('trips', []))} trips")
-    except Exception as e:
-        logger.error(f"Exception while fetching trips: {e}")
+    for page in range(pages):
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url, params=params, headers=headers) as response:
+                    if response.status != 200:
+                        logger.error(f"Failed to fetch trips: {response.status} {response.reason}")
+                        raise Exception(response.status, response.reason, await response.json())
+                    data = await response.json()
+                    trips.extend(data.get('trips', []))
+                    params["context"] = data.get("scrollRequestForwardContext", None)
+                    logger.info(f"Successfully fetched {len(trips)} trips from {origin} to {destination} [{page + 1}/{pages}]")
+        except Exception as e:
+            logger.error(f"Exception while fetching trips: {e}")
 
-    return data
+    return trips
 
 
 async def get_trips(where_to="home", date_time=None):
@@ -227,12 +233,12 @@ async def get_trips(where_to="home", date_time=None):
         stations = [("laa", "asdz"), ("gvc", "asdz"), ("laa", "asd"), ("gvc", "asd")]
         tasks = [fetch_trips(o, d, date_time) for o, d in stations]
         results = await asyncio.gather(*tasks)
-        trips_data = itertools.chain.from_iterable([r.get("trips", []) for r in results])
+        trips_data = itertools.chain.from_iterable(results)
     elif where_to == "home":
         stations = [("asdz", "laa"), ("asdz", "gvc"), ("asd", "laa"), ("asd", "gvc")]
         tasks = [fetch_trips(o, d, date_time) for o, d in stations]
         results = await asyncio.gather(*tasks)
-        trips_data = itertools.chain.from_iterable([r.get("trips", []) for r in results])
+        trips_data = itertools.chain.from_iterable(results)
     else:
         logger.info("Using sample trip data")
         with open("./sample_trip.json", "r") as f:
