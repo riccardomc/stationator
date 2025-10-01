@@ -164,7 +164,6 @@ class Trip(super):
             self.status}, {
             self.leave_by.strftime("%H:%M")}, {
             self.arrive_by.strftime("%H:%M")}, {
-            self.biking_time.strftime("%H:%M")}, {
             self.train_time.strftime("%H:%M")}, {
             self.travel_time.strftime("%H:%M")},
         """
