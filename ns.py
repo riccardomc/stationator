@@ -24,7 +24,7 @@ T = TypeVar('T')
 
 def async_lru_cache(maxsize: int = 128, typed: bool = False):
     cache = {}
-    
+
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @wraps(func)
         async def wrapper(*args: Any, **kwargs: Any) -> Any:
