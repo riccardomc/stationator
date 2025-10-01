@@ -18,7 +18,7 @@ class TestGetTrips(unittest.TestCase):
         # Mock the fetch_trips function to return appropriate sample data
         async def mock_fetch(origin, destination, date_time=None):
             key = f"{origin}-{destination}"
-            return self.sample_data.get(key, {"trips": []})
+            return self.sample_data.get(key, {"trips": []})["trips"]
         mock_fetch_trips.side_effect = mock_fetch
 
         # Test getting trips to home
@@ -34,7 +34,7 @@ class TestGetTrips(unittest.TestCase):
         # Mock the fetch_trips function to return appropriate sample data
         async def mock_fetch(origin, destination, date_time=None):
             key = f"{origin}-{destination}"
-            return self.sample_data.get(key, {"trips": []})
+            return self.sample_data.get(key, {"trips": []})["trips"]
         mock_fetch_trips.side_effect = mock_fetch
 
         # Test getting trips to work
@@ -50,7 +50,7 @@ class TestGetTrips(unittest.TestCase):
         # Mock the fetch_trips function to return appropriate sample data
         async def mock_fetch(origin, destination, date_time=None):
             key = f"{origin}-{destination}"
-            return self.sample_data.get(key, {"trips": []})
+            return self.sample_data.get(key, {"trips": []})["trips"]
         mock_fetch_trips.side_effect = mock_fetch
 
         # Test getting trips with a specific datetime
@@ -76,7 +76,7 @@ class TestGetTrips(unittest.TestCase):
         # Mock the fetch_trips function to return appropriate sample data
         async def mock_fetch(origin, destination, date_time=None):
             key = f"{origin}-{destination}"
-            return self.sample_data.get(key, {"trips": []})
+            return self.sample_data.get(key, {"trips": []})["trips"]
         mock_fetch_trips.side_effect = mock_fetch
 
         # Test that trips are sorted by departure time
