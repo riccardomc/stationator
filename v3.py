@@ -145,8 +145,8 @@ async def v3_trains_where_hour(where: str, hour: int):
 
         # Create Gantt chart container
         with container:
-            # Create scrollable container for the chart
-            chart_container = ui.column().classes('w-full max-w-6xl overflow-x-auto')
+            # Create container for the chart (no horizontal scrolling)
+            chart_container = ui.column().classes('w-full max-w-6xl overflow-x-hidden')
             
             with chart_container:
                 # Calculate chart width
@@ -167,10 +167,13 @@ async def v3_trains_where_hour(where: str, hour: int):
                         with ui.row().classes('w-[320px] flex-shrink-0 pr-2 items-center gap-1 sm:gap-2 flex-nowrap'):
                             # Calculate minutes until departure
                             minutes_until_departure = int((trip.departure_time - current_time).total_seconds() / 60)
-                            # Color logic: green if >= 15, red if < 15, gray if past
+                            # Get biking time for origin station
+                            origin_station = ns.stations.get(trip.origin)
+                            biking_time_minutes = int(origin_station.biking_time.total_seconds() / 60) if origin_station else 15
+                            # Color logic: green if >= biking_time, red if < biking_time, gray if past
                             if minutes_until_departure < 0:
                                 minutes_label_color = 'text-gray-500'
-                            elif minutes_until_departure >= 15:
+                            elif minutes_until_departure >= biking_time_minutes:
                                 minutes_label_color = 'text-green-600 font-semibold'
                             else:
                                 minutes_label_color = 'text-red-600 font-semibold'
@@ -226,22 +229,22 @@ async def v3_trains_where_hour(where: str, hour: int):
                             now_line_html = f'<div style="position: absolute; left: {now_position_percent}%; top: 0; width: 2px; height: 100%; background-color: #f44336; z-index: 10;" title="Now"></div>'
                         
                         gantt_html = f'''
-                            <div style="position: relative; width: 100%; height: {row_height}px; background-color: #f5f5f5; border: 1px solid #ddd; overflow: visible;">
+                            <div style="position: relative; width: 100%; height: {row_height}px; background-color: #ffffff; border: 1px solid #003082; overflow: visible;">
                                 {now_line_html}
+                                <!-- Leave by label above the box -->
+                                <div style="position: absolute; left: {start_percent}%; top: -18px; font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px;">{leave_by_str}</div>
+                                <!-- Arrive by label above the box -->
+                                <div style="position: absolute; left: calc({start_percent}% + {width_percent}%); top: -18px; transform: translateX(-100%); font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px;">{arrive_by_str}</div>
                                 <div style="position: absolute; left: {start_percent}%; width: {width_percent}%; height: 100%; display: flex; border-radius: 3px; overflow: visible;">
-                                    <!-- Leave by label at the beginning -->
-                                    <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%) translateX(-100%); padding-right: 4px; font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9);">{leave_by_str}</div>
                                     <!-- Biking before (to station) -->
-                                    <div style="width: {biking_before_percent}%; background-color: #4CAF50; border-right: 1px solid #2E7D32; position: relative;" title="Biking to station"></div>
+                                    <div style="width: {biking_before_percent}%; background-color: #FFC917; border-right: 1px solid #E6B815; position: relative;" title="Biking to station"></div>
                                     <!-- Train time -->
-                                    <div style="position: relative; width: {train_percent}%; background-color: #2196F3; border-right: 1px solid #1565C0;" title="Train time">
+                                    <div style="position: relative; width: {train_percent}%; background-color: #003082; border-right: 1px solid #002366;" title="Train time">
                                         <div style="position: absolute; left: 2px; top: 2px; font-size: 9px; color: white; font-weight: bold; white-space: nowrap; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">{dep_time_str}</div>
                                         <div style="position: absolute; right: 2px; bottom: 2px; font-size: 9px; color: white; font-weight: bold; white-space: nowrap; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">{arr_time_str}</div>
                                     </div>
                                     <!-- Biking after (from station) -->
-                                    <div style="width: {biking_after_percent}%; background-color: #4CAF50; position: relative;" title="Biking from station"></div>
-                                    <!-- Arrive by label at the end -->
-                                    <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%) translateX(100%); padding-left: 4px; font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9);">{arrive_by_str}</div>
+                                    <div style="width: {biking_after_percent}%; background-color: #FFC917; position: relative;" title="Biking from station"></div>
                                 </div>
                             </div>
                         '''

@@ -66,21 +66,21 @@ stations = {
         {
             "full_name": "Amsterdam Zuid",
             "short_name": "asdz",
-            "biking_time": "00:06",
+            "biking_time": "00:05",
         }
     ),
     "gvc": Station(
         {
             "full_name": "Den Haag Centraal",
             "short_name": "gvc",
-            "biking_time": "00:11",
+            "biking_time": "00:15",
         }
     ),
     "laa": Station(
         {
             "full_name": "Den Haag Laan van NOI",
             "short_name": "laa",
-            "biking_time": "00:14",
+            "biking_time": "00:20",
         }
     ),
 }
