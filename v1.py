@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from datetime import datetime, timedelta
-from nicegui import ui, run, app
+from nicegui import ui, app
 import ns
 import logging
 import storage
@@ -49,7 +49,7 @@ columns = [{"name": c, "label": l, "field": c}
 
 
 @ui.page("/v1/trains")
-def v1_trains_index():
+async def v1_trains_index():
     logger.info("Rendering v1 trains index page")
     ui.link("🏠", "trains/home")
     ui.link("💼", "trains/work")
@@ -125,20 +125,22 @@ async def v1_trains_where_hour(where: str, hour: int):
 
     # Update label and filter rows
     now = date_time.strftime("%H:%M")
+    station_selection = app.storage.user['station_selection']
     def update_label():
         filtered_rows = [
             row for row in rows
-            if app.storage.user['station_selection'][row['origin']] and app.storage.user['station_selection'][row['destination']]
+            if station_selection[row['origin']] and station_selection[row['destination']]
         ]
         table.rows = filtered_rows
         label.set_text(f"Found {len(filtered_rows)} trips at {now}")
 
     # Add station selection checkboxes
     with ui.row().classes('w-full justify-left gap-4 mb-4'):
+        station_selection = app.storage.user['station_selection']
         for station_code, station in ns.stations.items():
             checkbox = ui.checkbox(
                 station_code.upper(),
-                value=app.storage.user['station_selection'][station_code]
+                value=station_selection[station_code]
             ).classes('text-base')
             checkbox.bind_value(app.storage.user['station_selection'], station_code)
             checkbox.on('change', update_label)

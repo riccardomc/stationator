@@ -44,7 +44,7 @@ def async_lru_cache(maxsize: int = 128, typed: bool = False):
     return decorator
 
 
-class Station(super):
+class Station:
 
     def __init__(self, station_data):
         self.full_name = station_data["full_name"]
@@ -86,7 +86,7 @@ stations = {
 }
 
 
-class Trip(super):
+class Trip:
 
     def __init__(self, trip_data):
 

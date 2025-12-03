@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from datetime import datetime, timedelta
-from nicegui import ui, run, app
+from nicegui import ui, app
 import ns
 import logging
 
@@ -26,7 +26,7 @@ def format_timedelta(td) -> str:
 
 
 @ui.page("/v2/trains")
-def v2_trains_index():
+async def v2_trains_index():
     logger.info("Rendering v2 trains index page")
     ui.link("🏠", "trains/home").classes('no-underline')
     ui.link("💼", "trains/work").classes('no-underline')
@@ -73,12 +73,13 @@ async def v2_trains_where_hour(where: str, hour: int):
 
                 # Center: Station selection
                 with ui.row().classes('items-center gap-2 sm:gap-3'):
+                    station_selection = app.storage.user['station_selection']
                     for station_code, station in ns.stations.items():
                         checkbox = ui.checkbox(
                             station_code.upper(),
-                            value=app.storage.user['station_selection'][station_code]
+                            value=station_selection[station_code]
                         ).classes('text-sm')
-                        checkbox.bind_value(app.storage.user['station_selection'], station_code)
+                        checkbox.bind_value(station_selection, station_code)
 
                 # Right side: Refresh and status
                 with ui.row().classes('items-center gap-2'):
@@ -100,17 +101,14 @@ async def v2_trains_where_hour(where: str, hour: int):
 
         # Update label
         now = date_time.strftime("%H:%M")
-        label.bind_text_from(
-            trips,
-            "length",
-            lambda length: f"{'🏠' if where == 'home' else '💼'} {length} trips at {now}",
-        )
+        label.set_text(f"{'🏠' if where == 'home' else '💼'} {len(trips)} trips at {now}")
 
         # Group trips by station (origin for work, destination for home)
+        station_selection = app.storage.user['station_selection']
         trips_by_station = {}
         for trip in trips:
             # Skip trips where either origin or destination is not selected
-            if not app.storage.user['station_selection'][trip.origin] or not app.storage.user['station_selection'][trip.destination]:
+            if not station_selection[trip.origin] or not station_selection[trip.destination]:
                 continue
 
             station = trip.destination if where == "home" else trip.origin
@@ -127,7 +125,7 @@ async def v2_trains_where_hour(where: str, hour: int):
             with ui.row().classes('w-full max-w-3xl gap-2 sm:gap-4 justify-center flex-wrap'):
                 for station in sorted_stations:
                     # Skip stations that are not selected
-                    if not app.storage.user['station_selection'][station]:
+                    if not station_selection[station]:
                         continue
 
                     with ui.column().classes('items-center'):

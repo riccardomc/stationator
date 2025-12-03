@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from datetime import datetime, timedelta
-from nicegui import ui, run, app
+from nicegui import ui, app
 import ns
 import logging
 import storage
@@ -27,7 +27,7 @@ def format_timedelta(td) -> str:
 
 
 @ui.page("/v3/trains")
-def v3_trains_index():
+async def v3_trains_index():
     logger.info("Rendering v3 trains index page")
     ui.link("🏠", "trains/home").classes('no-underline')
     ui.link("💼", "trains/work").classes('no-underline')
@@ -81,12 +81,13 @@ async def v3_trains_where_hour(where: str, hour: int):
                 
                 # Second row: Station selection - wrap on mobile
                 with ui.row().classes('w-full items-center gap-1 sm:gap-2 flex-wrap justify-center sm:justify-start'):
+                    station_selection = app.storage.user['station_selection']
                     for station_code, station in ns.stations.items():
                         checkbox = ui.checkbox(
                             station_code.upper(),
-                            value=app.storage.user['station_selection'][station_code]
+                            value=station_selection[station_code]
                         ).classes('text-xs scale-90 sm:scale-100')
-                        checkbox.bind_value(app.storage.user['station_selection'], station_code)
+                        checkbox.bind_value(station_selection, station_code)
 
         # set time
         date_time = ns.get_amsterdam_time(hour)
@@ -98,10 +99,11 @@ async def v3_trains_where_hour(where: str, hour: int):
         logger.info(f"Retrieved {len(trips)} trips")
 
         # Filter trips based on station selection
+        station_selection = app.storage.user['station_selection']
         filtered_trips = [
             trip for trip in trips
-            if app.storage.user['station_selection'][trip.origin] and 
-               app.storage.user['station_selection'][trip.destination]
+            if station_selection[trip.origin] and 
+               station_selection[trip.destination]
         ]
 
         # Sort trips by arrival_time
@@ -172,7 +174,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                             ui.label(minutes_display).classes(f'text-[10px] sm:text-xs {minutes_label_color} whitespace-nowrap ml-auto')
                         
                         # Gantt bar container
-                        gantt_bar = ui.html('').style(f'width: {chart_width}px; position: relative;')
+                        gantt_bar = ui.html('', sanitize=False).style(f'width: {chart_width}px; position: relative;')
                         
                         # Calculate positions and widths
                         trip_start_offset = (trip.leave_by - min_time).total_seconds()
