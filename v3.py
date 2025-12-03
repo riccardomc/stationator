@@ -5,6 +5,7 @@ import ns
 import logging
 import storage
 import icons
+import asyncio
 
 # Configure logging
 logging.basicConfig(
@@ -36,9 +37,9 @@ def format_minutes(minutes: int) -> str:
     if abs_minutes >= 60:
         hours = abs_minutes // 60
         mins = abs_minutes % 60
-        formatted = f"{hours}h {mins:02d}min"
+        formatted = f"{hours}h {mins:02d}m"
     else:
-        formatted = str(abs_minutes) + "min"
+        formatted = str(abs_minutes) + "m"
 
     # Preserve original sign behavior: '-' for future (>=0), '+' for past (<0)
     if minutes >= 0:
@@ -78,6 +79,36 @@ async def v3_trains_where_hour(where: str, hour: int):
     # Create a container for the page
     container = ui.column().classes('w-full items-center gap-2 px-2 sm:px-4')
 
+    # Track selected trip index
+    selected_trip_index = {'value': None}
+
+    def get_trip_id(trip) -> str:
+        """Generate a unique, stable ID for a trip based on its key attributes."""
+        dep_time_str = trip.departure_time.strftime("%H%M")
+        return f"trip-{trip.origin}-{trip.destination}-{dep_time_str}"
+
+    async def scroll_to_anchor_if_present():
+        """Scroll to anchor in URL if present."""
+        await asyncio.sleep(0.3)  # Wait for rendering
+        ui.run_javascript('''
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const element = document.getElementById(hash);
+                if (element) {
+                    setTimeout(() => {
+                        element.scrollIntoView({behavior: "smooth", block: "center"});
+                        // Find the trip index and select it
+                        const tripRows = document.querySelectorAll('[id^="trip-"]');
+                        tripRows.forEach((row, idx) => {
+                            if (row.id === hash) {
+                                row.click();
+                            }
+                        });
+                    }, 100);
+                }
+            }
+        ''')
+
     async def refresh_trips():
         """Fetch and display trips as Gantt chart."""
         container.clear()
@@ -96,7 +127,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                             ui.html(icons.ns_icon('prev', 24), sanitize=False)
                         with ui.link("", f"/v3/trains/{where}/{hour + 1}").classes('no-underline'):
                             ui.html(icons.ns_icon('next', 24), sanitize=False)
-                    
+
                     # Right: Trip count, home, refresh and status
                     with ui.row().classes('items-center gap-2'):
                         trip_count_label = ui.label("").classes('text-sm sm:text-base')
@@ -109,7 +140,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                             await refresh_trips()
                         refresh_link.on('click', on_refresh)
                         spinner = ui.spinner()
-                
+
                 # Second row: Station selection - wrap on mobile
                 with ui.row().classes('w-full items-center gap-1 sm:gap-2 flex-wrap justify-center sm:justify-start'):
                     station_selection = app.storage.user['station_selection']
@@ -133,7 +164,7 @@ async def v3_trains_where_hour(where: str, hour: int):
         station_selection = app.storage.user['station_selection']
         filtered_trips = [
             trip for trip in trips
-            if station_selection[trip.origin] and 
+            if station_selection[trip.origin] and
                station_selection[trip.destination]
         ]
 
@@ -158,7 +189,7 @@ async def v3_trains_where_hour(where: str, hour: int):
         with container:
             # Create container for the chart (no horizontal scrolling)
             chart_container = ui.column().classes('w-full max-w-6xl overflow-x-hidden')
-            
+
             with chart_container:
                 # Calculate chart width
                 chart_width = max(800, int(total_duration.total_seconds() * 2))  # 2px per second, minimum 800px
@@ -173,7 +204,32 @@ async def v3_trains_where_hour(where: str, hour: int):
                 # Gantt chart rows
                 row_height = 35
                 for idx, trip in enumerate(filtered_trips):
-                    with ui.row().classes('w-full mb-1 items-center'):
+                    trip_id = get_trip_id(trip)
+                    is_selected = selected_trip_index['value'] == idx
+                    row_classes = 'w-full mb-1 items-center cursor-pointer transition-all'
+                    if is_selected:
+                        row_classes += ' bg-blue-50 rounded p-1'
+                    trip_row = ui.row().classes(row_classes)
+                    trip_row.props(f'id="{trip_id}"')
+
+                    def make_click_handler(trip_idx, trip_anchor_id):
+                        async def on_click():
+                            if selected_trip_index['value'] == trip_idx:
+                                selected_trip_index['value'] = None
+                                # Remove anchor from URL
+                                ui.run_javascript(f'history.replaceState(null, "", window.location.pathname)')
+                            else:
+                                selected_trip_index['value'] = trip_idx
+                                # Update URL with anchor
+                                ui.run_javascript(f'history.replaceState(null, "", window.location.pathname + "#{trip_anchor_id}")')
+                                # Scroll to the trip
+                                ui.run_javascript(f'document.getElementById("{trip_anchor_id}").scrollIntoView({{behavior: "smooth", block: "center"}})')
+                            await refresh_trips()
+                        return on_click
+
+                    trip_row.on('click', make_click_handler(idx, trip_id))
+
+                    with trip_row:
                         # Trip label (left side) - all info on one line
                         with ui.row().classes('w-[320px] flex-shrink-0 pr-2 items-center gap-1 sm:gap-2 flex-nowrap'):
                             # Calculate minutes until departure
@@ -189,7 +245,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                             else:
                                 minutes_label_color = 'text-red-600 font-semibold'
                             minutes_display = format_minutes(minutes_until_departure)
-                            
+
                             # Order: origin -> destination, status, direction, track number, travel_time, minutes_to_go (right justified)
                             ui.label(f"{trip.origin.upper()} → {trip.destination.upper()}").classes('text-[10px] sm:text-xs font-bold whitespace-nowrap')
                             # Status with color coding - always shown
@@ -206,41 +262,43 @@ async def v3_trains_where_hour(where: str, hour: int):
                             ui.label(f"{format_timedelta(trip.travel_time)}").classes('text-[10px] sm:text-xs text-gray-500 whitespace-nowrap')
                             # Minutes to go - right justified
                             ui.label(minutes_display).classes(f'text-[10px] sm:text-xs {minutes_label_color} whitespace-nowrap ml-auto')
-                        
+
                         # Gantt bar container
                         gantt_bar = ui.html('', sanitize=False).style(f'width: {chart_width}px; position: relative;')
-                        
+
                         # Calculate positions and widths
                         trip_start_offset = (trip.leave_by - min_time).total_seconds()
                         trip_end_offset = (trip.arrive_by - min_time).total_seconds()
                         total_trip_duration = (trip.arrive_by - trip.leave_by).total_seconds()
-                        
+
                         start_percent = (trip_start_offset / total_duration.total_seconds()) * 100 if total_duration.total_seconds() > 0 else 0
                         width_percent = (total_trip_duration / total_duration.total_seconds()) * 100 if total_duration.total_seconds() > 0 else 0
-                        
+
                         # Calculate segments using actual time differences
                         biking_before_seconds = (trip.departure_time - trip.leave_by).total_seconds()
                         train_time_seconds = (trip.arrival_time - trip.departure_time).total_seconds()
                         biking_after_seconds = (trip.arrive_by - trip.arrival_time).total_seconds()
-                        
+
                         biking_before_percent = (biking_before_seconds / total_trip_duration) * 100 if total_trip_duration > 0 else 0
                         train_percent = (train_time_seconds / total_trip_duration) * 100 if total_trip_duration > 0 else 0
                         biking_after_percent = (biking_after_seconds / total_trip_duration) * 100 if total_trip_duration > 0 else 0
-                        
+
                         # Format times for display
                         dep_time_str = format_timedelta(trip.departure_time)
                         arr_time_str = format_timedelta(trip.arrival_time)
                         leave_by_str = format_timedelta(trip.leave_by)
                         arrive_by_str = format_timedelta(trip.arrive_by)
-                        
+
                         # Create Gantt bar HTML
                         # Add "now" line if current time is within the chart range
                         now_line_html = ''
                         if min_time <= current_time <= max_time:
                             now_line_html = f'<div style="position: absolute; left: {now_position_percent}%; top: 0; width: 2px; height: 100%; background-color: #f44336; z-index: 10;" title="Now"></div>'
-                        
+
+                        border_color = '#003082' if is_selected else '#003082'
+                        border_width = '3px' if is_selected else '1px'
                         gantt_html = f'''
-                            <div style="position: relative; width: 100%; height: {row_height}px; background-color: #ffffff; border: 1px solid #003082; overflow: visible;">
+                            <div style="position: relative; width: 100%; height: {row_height}px; background-color: #ffffff; border: {border_width} solid {border_color}; overflow: visible;">
                                 {now_line_html}
                                 <!-- Leave by label above the box -->
                                 <div style="position: absolute; left: {start_percent}%; top: -18px; font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px;">{leave_by_str}</div>
@@ -260,6 +318,9 @@ async def v3_trains_where_hour(where: str, hour: int):
                             </div>
                         '''
                         gantt_bar.set_content(gantt_html)
+
+        # Check for anchor after trips are rendered
+        await scroll_to_anchor_if_present()
 
     # Initial load of trips
     await refresh_trips()
