@@ -4,6 +4,7 @@ from nicegui import ui, app
 import ns
 import logging
 import storage
+import icons
 
 # Configure logging
 logging.basicConfig(
@@ -49,9 +50,13 @@ def format_minutes(minutes: int) -> str:
 @ui.page("/v3/trains")
 async def v3_trains_index():
     logger.info("Rendering v3 trains index page")
-    ui.link("🏠", "trains/home").classes('no-underline')
-    ui.link("💼", "trains/work").classes('no-underline')
-    ui.link("⬅️ back", "/trains").classes('no-underline')
+    with ui.link("", "trains/home").classes('no-underline'):
+        ui.html(icons.ns_icon('home', 24), sanitize=False)
+    with ui.link("", "trains/work").classes('no-underline'):
+        ui.html(icons.ns_icon('work', 24), sanitize=False)
+    with ui.link("", "/trains").classes('no-underline'):
+        ui.html(icons.ns_icon('back', 20), sanitize=False)
+        ui.label("back")
 
 
 @ui.page("/v3/trains/{where}")
@@ -85,15 +90,21 @@ async def v3_trains_where_hour(where: str, hour: int):
                 with ui.row().classes('w-full justify-between items-center flex-wrap gap-2'):
                     # Left: Navigation
                     with ui.row().classes('items-center gap-2'):
-                        ui.link("🫵", "/v3/trains").classes('text-lg sm:text-xl no-underline')
-                        ui.link("➖", f"/v3/trains/{where}/{hour - 1}").classes('text-lg sm:text-xl no-underline')
-                        ui.link("➕", f"/v3/trains/{where}/{hour + 1}").classes('text-lg sm:text-xl no-underline')
+                        with ui.link("", "/v3/trains").classes('no-underline'):
+                            ui.html(icons.ns_icon('menu', 24), sanitize=False)
+                        with ui.link("", f"/v3/trains/{where}/{hour - 1}").classes('no-underline'):
+                            ui.html(icons.ns_icon('prev', 24), sanitize=False)
+                        with ui.link("", f"/v3/trains/{where}/{hour + 1}").classes('no-underline'):
+                            ui.html(icons.ns_icon('next', 24), sanitize=False)
                     
                     # Right: Trip count, home, refresh and status
                     with ui.row().classes('items-center gap-2'):
                         trip_count_label = ui.label("").classes('text-sm sm:text-base')
-                        home_emoji = ui.label(f"{'🏠' if where == 'home' else '💼'}").classes('text-xl sm:text-2xl')
-                        refresh_link = ui.link('🔄', '#').classes('text-xl sm:text-2xl no-underline')
+                        with ui.label("").classes('text-xl sm:text-2xl'):
+                            ui.html(icons.ns_icon('home' if where == 'home' else 'work', 28), sanitize=False)
+                        refresh_link = ui.link('', '#').classes('no-underline')
+                        with refresh_link:
+                            ui.html(icons.ns_icon('refresh', 28), sanitize=False)
                         async def on_refresh():
                             await refresh_trips()
                         refresh_link.on('click', on_refresh)
@@ -106,7 +117,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                         checkbox = ui.checkbox(
                             station_code.upper(),
                             value=station_selection[station_code]
-                        ).classes('text-xs scale-90 sm:scale-100')
+                        ).classes('text-xs scale-90 sm:scale-100').style('--q-primary: #003082')
                         checkbox.bind_value(station_selection, station_code)
 
         # set time

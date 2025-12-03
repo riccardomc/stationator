@@ -4,6 +4,7 @@ from nicegui import ui, app
 import ns
 import logging
 import storage
+import icons
 
 # Configure logging
 logging.basicConfig(
@@ -51,9 +52,13 @@ columns = [{"name": c, "label": l, "field": c}
 @ui.page("/v1/trains")
 async def v1_trains_index():
     logger.info("Rendering v1 trains index page")
-    ui.link("🏠", "trains/home")
-    ui.link("💼", "trains/work")
-    ui.link("⬅️ back", "/trains")
+    with ui.link("", "trains/home").classes('no-underline'):
+        ui.html(icons.ns_icon('home', 24), sanitize=False)
+    with ui.link("", "trains/work").classes('no-underline'):
+        ui.html(icons.ns_icon('work', 24), sanitize=False)
+    with ui.link("", "/trains").classes('no-underline'):
+        ui.html(icons.ns_icon('back', 20), sanitize=False)
+        ui.label("back")
 
 
 @ui.page("/v1/trains/{where}")

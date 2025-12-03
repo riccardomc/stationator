@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 from nicegui import ui, app
 import ns
 import logging
+import icons
 
 # Configure logging
 logging.basicConfig(
@@ -28,9 +29,13 @@ def format_timedelta(td) -> str:
 @ui.page("/v2/trains")
 async def v2_trains_index():
     logger.info("Rendering v2 trains index page")
-    ui.link("🏠", "trains/home").classes('no-underline')
-    ui.link("💼", "trains/work").classes('no-underline')
-    ui.link("⬅️ back", "/trains").classes('no-underline')
+    with ui.link("", "trains/home").classes('no-underline'):
+        ui.html(icons.ns_icon('home', 24), sanitize=False)
+    with ui.link("", "trains/work").classes('no-underline'):
+        ui.html(icons.ns_icon('work', 24), sanitize=False)
+    with ui.link("", "/trains").classes('no-underline'):
+        ui.html(icons.ns_icon('back', 20), sanitize=False)
+        ui.label("back")
 
 
 @ui.page("/v2/trains/{where}")

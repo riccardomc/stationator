@@ -4,6 +4,7 @@ from nicegui import ui, app
 import ns
 import asyncio
 import storage
+import icons
 
 # import is necessary to make pages work
 import v1
@@ -20,11 +21,19 @@ async def root():
 @ui.page("/trains")
 async def trains_index():
     storage.init_storage()
-    ui.link("🏠", "trains/home")
-    ui.link("💼", "trains/work")
-    ui.link("📈 v3", "/v3/trains")
-    ui.link("📋 v2", "/v2/trains")
-    ui.link("📊 v1", "/v1/trains")
+    with ui.link("", "trains/home").classes('no-underline'):
+        ui.html(icons.ns_icon('home', 24), sanitize=False)
+    with ui.link("", "trains/work").classes('no-underline'):
+        ui.html(icons.ns_icon('work', 24), sanitize=False)
+    with ui.link("", "/v3/trains"):
+        ui.html(icons.ns_icon('v3', 20), sanitize=False)
+        ui.label("v3")
+    with ui.link("", "/v2/trains"):
+        ui.html(icons.ns_icon('v2', 20), sanitize=False)
+        ui.label("v2")
+    with ui.link("", "/v1/trains"):
+        ui.html(icons.ns_icon('v1', 20), sanitize=False)
+        ui.label("v1")
 
 
 @ui.page("/trains/{where}")
