@@ -22,8 +22,9 @@ def trains_index():
     storage.init_storage()
     ui.link("🏠", "trains/home")
     ui.link("💼", "trains/work")
-    ui.link("📊 v1", "/v1/trains")
     ui.link("📈 v3", "/v3/trains")
+    ui.link("📋 v2", "/v2/trains")
+    ui.link("📊 v1", "/v1/trains")
 
 
 @ui.page("/trains/{where}")
@@ -36,8 +37,8 @@ async def trains_where(where: str):
 @ui.page("/trains/{where}/{hour}")
 async def trains_where_hour(where: str, hour: int):
     storage.init_storage()
-    # Redirect to v2 implementation
-    ui.navigate.to(f"/v2/trains/{where}/{hour}")
+    # Redirect to v3 implementation
+    ui.navigate.to(f"/v3/trains/{where}/{hour}")
 
 
 async def get_trips():
