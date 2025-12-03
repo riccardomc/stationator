@@ -26,6 +26,26 @@ def format_timedelta(td) -> str:
     return str(td)
 
 
+def format_minutes(minutes: int) -> str:
+    """Format minutes as 'h:min' if >= 1 hour, or just 'min' if < 1 hour.
+
+    Preserves original sign behavior: '-' prefix for future (>=0), '+' prefix for past (<0).
+    """
+    abs_minutes = abs(minutes)
+    if abs_minutes >= 60:
+        hours = abs_minutes // 60
+        mins = abs_minutes % 60
+        formatted = f"{hours}h {mins:02d}min"
+    else:
+        formatted = str(abs_minutes) + "min"
+
+    # Preserve original sign behavior: '-' for future (>=0), '+' for past (<0)
+    if minutes >= 0:
+        return f"-{formatted}"
+    else:
+        return f"+{formatted}"
+
+
 @ui.page("/v3/trains")
 async def v3_trains_index():
     logger.info("Rendering v3 trains index page")
@@ -154,7 +174,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                                 minutes_label_color = 'text-green-600 font-semibold'
                             else:
                                 minutes_label_color = 'text-red-600 font-semibold'
-                            minutes_display = f"-{abs(minutes_until_departure)}" if minutes_until_departure >= 0 else f"+{abs(minutes_until_departure)}"
+                            minutes_display = format_minutes(minutes_until_departure)
                             
                             # Order: origin -> destination, status, direction, track number, travel_time, minutes_to_go (right justified)
                             ui.label(f"{trip.origin.upper()} → {trip.destination.upper()}").classes('text-[10px] sm:text-xs font-bold whitespace-nowrap')
