@@ -8,6 +8,7 @@ import storage
 # import is necessary to make pages work
 import v1
 import v2
+import v3
 
 
 @ui.page("/")
@@ -22,6 +23,7 @@ def trains_index():
     ui.link("🏠", "trains/home")
     ui.link("💼", "trains/work")
     ui.link("📊 v1", "/v1/trains")
+    ui.link("📈 v3", "/v3/trains")
 
 
 @ui.page("/trains/{where}")
