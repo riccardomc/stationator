@@ -293,7 +293,7 @@ async def v3_trains_where_hour(where: str, hour: int):
                         # Work page: home icon on arrive_by, work icon on leave_by
                         # Home page: work icon on arrive_by, home icon on leave_by
                         icon_size = 12
-                        if where == 'work':
+                        if where == 'home':
                             leave_by_icon = icons.ns_icon('work', icon_size)
                             arrive_by_icon = icons.ns_icon('home', icon_size)
                         else:  # home page
@@ -312,14 +312,14 @@ async def v3_trains_where_hour(where: str, hour: int):
                             <div style="position: relative; width: 100%; height: {row_height}px; background-color: #ffffff; border: {border_width} solid {border_color}; overflow: visible;">
                                 {now_line_html}
                                 <!-- Leave by label above the box -->
-                                <div style="position: absolute; left: {start_percent}%; top: -18px; font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px; display: inline-flex; align-items: center; gap: 3px;">
-                                    <span style="display: inline-flex; align-items: center; vertical-align: middle;">{leave_by_icon}</span>
+                                <div style="position: absolute; left: {start_percent}%; top: -18px; font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px; display: inline-flex; align-items: center; gap: 3px; vertical-align: middle;">
+                                    <span style="display: inline-block; vertical-align: middle; line-height: 1;">{leave_by_icon}</span>
                                     <span>{leave_by_str}</span>
                                 </div>
                                 <!-- Arrive by label above the box -->
-                                <div style="position: absolute; left: calc({start_percent}% + {width_percent}%); top: -18px; transform: translateX(-100%); font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px; display: inline-flex; align-items: center; gap: 3px; flex-direction: row;">
+                                <div style="position: absolute; left: calc({start_percent}% + {width_percent}%); top: -18px; transform: translateX(-100%); font-size: 9px; color: #333; font-weight: bold; white-space: nowrap; background-color: rgba(255,255,255,0.9); padding: 0 2px; display: inline-flex; align-items: center; gap: 3px; vertical-align: middle;">
+                                    <span style="display: inline-block; vertical-align: middle; line-height: 1;">{arrive_by_icon}</span>
                                     <span>{arrive_by_str}</span>
-                                    <span style="display: inline-flex; align-items: center; vertical-align: middle;">{arrive_by_icon}</span>
                                 </div>
                                 <div style="position: absolute; left: {start_percent}%; width: {width_percent}%; height: 100%; display: flex; border-radius: 3px; overflow: visible;">
                                     <!-- Biking before (to station) -->
@@ -328,7 +328,6 @@ async def v3_trains_where_hour(where: str, hour: int):
                                     <div style="position: relative; width: {train_percent}%; background-color: #003082; border-right: 1px solid #002366;" title="Train time">
                                         <div style="position: absolute; left: 2px; top: 2px; font-size: 9px; color: white; font-weight: bold; white-space: nowrap; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">{dep_time_str}</div>
                                         <div style="position: absolute; right: 2px; bottom: 2px; font-size: 9px; color: white; font-weight: bold; white-space: nowrap; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">{arr_time_str}</div>
-                                        <div style="position: absolute; left: 2px; bottom: 2px; display: flex; align-items: center; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));">{icons.ns_icon('train', 12)}</div>
                                     </div>
                                     <!-- Biking after (from station) -->
                                     <div style="width: {biking_after_percent}%; background-color: #FFC917; position: relative;" title="Biking from station"></div>
