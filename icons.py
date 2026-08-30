@@ -6,7 +6,7 @@ def ns_icon(icon_name: str, size: int = 20) -> str:
     """Return NS-style SVG icon as HTML string.
     
     Args:
-        icon_name: Name of the icon (home, work, back, prev, next, refresh, menu, v1, v2, v3)
+        icon_name: Name of the icon (home, work, back, prev, next, refresh, menu, v3)
         size: Size of the icon in pixels (default: 20)
     
     Returns:
@@ -20,8 +20,6 @@ def ns_icon(icon_name: str, size: int = 20) -> str:
         'next': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="#003082" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>',
         'refresh': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="#003082" xmlns="http://www.w3.org/2000/svg"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>',
         'menu': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="#003082" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>',
-        'v1': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="#003082" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>',
-        'v2': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="#003082" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>',
         'v3': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="#003082" xmlns="http://www.w3.org/2000/svg"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>',
         'train': f'<svg width="{size}" height="{size}" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c-4 0-8 .5-8 4v9.5c0 .95.38 1.81 1 2.44V20c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.06c.62-.63 1-1.49 1-2.44V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 11H6V6h12v5z"/></svg>',
     }

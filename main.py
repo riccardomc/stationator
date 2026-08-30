@@ -7,8 +7,6 @@ import storage
 import icons
 
 # import is necessary to make pages work
-import v1
-import v2
 import v3
 
 
@@ -28,12 +26,6 @@ async def trains_index():
     with ui.link("", "/v3/trains"):
         ui.html(icons.ns_icon('v3', 20), sanitize=False)
         ui.label("v3")
-    with ui.link("", "/v2/trains"):
-        ui.html(icons.ns_icon('v2', 20), sanitize=False)
-        ui.label("v2")
-    with ui.link("", "/v1/trains"):
-        ui.html(icons.ns_icon('v1', 20), sanitize=False)
-        ui.label("v1")
 
 
 @ui.page("/trains/{where}")
